@@ -1,8 +1,54 @@
-
 body {
-    background-color: #38a8ae; 
+    /* Color de fondo */
+    background-color: #38a8ae;
+    /* Establece la imagen de fondo */
+    background-image: url('../../img/vet.png');
+    /* Establece cómo se muestra la imagen */
+    background-size: auto 50%; /* Tamaño automático con el 50% de la altura */
+    background-position: left bottom; /* Alinea la imagen a la izquierda y abajo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
 }
 
 .navbar-nav .nav-link {
-    color: white; 
+    color: black; 
+}
+
+h1 {
+    color: white;
+}
+h2 {
+    color: white;
+}
+h4{
+    color: white;
+}
+
+.nav-item {
+    color: white;
+}
+section {
+    color:white;
+}
+.svg-icon path {
+    fill: rgba(255, 255, 255, 0.55);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-login {
+    background-color: #d16253; /* Cambia el color de fondo */
+    border-color: #d16253; /* Cambia el color del borde */
+    color: #ffffff; /* Cambia el color del texto */
+    padding: 6px;
+}
+
+.btn-login:hover {
+    background-color: #d16253; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    border-color: #2a7f83; /* Cambia el color del borde al pasar el cursor sobre el botón */
+    color: #ffffff; /* Cambia el color del texto al pasar el cursor sobre el botón */
 }
