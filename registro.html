@@ -38,6 +38,11 @@
       <form>
         <h2>Crear cuenta</h2>
         <div class="mb-3">
+            <label for="Rut" class="form-label">RUT</label>
+            <input type="number" class="form-control" id="input_Rut" placeholder="Ingresa tu RUT" required>
+        </div>
+        
+        <div class="mb-3">
           <label for="Nombres" class="form-label">Nombres</label>
           <input type="text" class="form-control" id="input_Nombres" placeholder="Ingresa tus nombres" required>
           
@@ -45,8 +50,12 @@
         <div class="mb-3">
           <label for="Apellidos" class="form-label">Apellidos</label>
           <input type="text" class="form-control" id="input_Apellidos" placeholder="Ingresa tus apellidos" required>
-          
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono Celular</label>
+            <input type="tel" class="form-control" id="input_telefono" placeholder="Ingresa tu número de teléfono" required>
         </div>
+        
         <div class="mb-3">
           <label for="input_email" class="form-label">Email</label>
           <input type="email" class="form-control" id="input_email" placeholder="¿Cuál es su dirección de email?" required>
