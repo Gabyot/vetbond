@@ -37,39 +37,37 @@
       </nav>
       <form>
         <h2>Crear cuenta</h2>
-        <div class="mb-3">
-            <label for="Rut" class="form-label">RUT</label>
-            <input type="number" class="form-control" id="input_Rut" placeholder="Ingresa tu RUT" required>
+            <div class="mb-2">
+                <label for="input_Rut" class="form-label">RUT</label>
+                <input type="number" class="form-control" id="input_Rut" placeholder="Ingresa tu RUT" required>
+            </div>
+        <div class="row">
+            <div class="col-md-6">
+              <label for="Nombres" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="input_Nombres" placeholder="Ingresa tus nombres" required>
+              </div>
+            <div class="col-md-6">
+              <label for="Apellidos" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="input_Apellidos" placeholder="Ingresa tus apellidos" required>
+            </div>
         </div>
-        
-        <div class="mb-3">
-          <label for="Nombres" class="form-label">Nombres</label>
-          <input type="text" class="form-control" id="input_Nombres" placeholder="Ingresa tus nombres" required>
-          
-        </div>
-        <div class="mb-3">
-          <label for="Apellidos" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="input_Apellidos" placeholder="Ingresa tus apellidos" required>
-          </div>
-          <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono Celular</label>
-            <input type="tel" class="form-control" id="input_telefono" placeholder="Ingresa tu número de teléfono" required>
-        </div>
-        
-        <div class="mb-3">
-          <label for="input_email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="input_email" placeholder="¿Cuál es su dirección de email?" required>
-          
-        </div>
-        <div class="mb-3">
-          <label for="input_password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="input_password" placeholder="Contraseña" required>
-        </div>
-        <div class="mb-3 form-check"> <!-- en caso de querer agregar un link a terminos y condiciones, sino eliminar>-->
-          <input type="checkbox" class="form-check-input" id="checkbox_registro">
-          <label class="form-check-label" for="checkbox_registro">Acepto los términos y condiciones.</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Registrarse</button>
+            <div class="mb-2">
+              <label for="input_telefono" class="form-label">Teléfono Celular</label>
+              <input type="tel" class="form-control" id="input_telefono" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+            <div class="mb-2">
+              <label for="input_email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="input_email" placeholder="¿Cuál es su dirección de email?" required>
+            </div>
+            <div class="mb-2">
+              <label for="input_password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="input_password" placeholder="Contraseña" required>
+            </div>
+            <div class="mb-2 form-check"> <!-- en caso de no querer agregar un link a terminos y condiciones,eliminar>-->
+              <input type="checkbox" class="form-check-input" id="checkbox_registro">
+              <label class="form-check-label" for="checkbox_registro">Acepto los términos y condiciones.</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
       </form>
     <footer class="bg-body-tertiary text-center py-4">
         <div class="container">
