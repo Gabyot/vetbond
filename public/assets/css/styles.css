@@ -8,6 +8,9 @@ body {
     background-position: left bottom; /* Alinea la imagen a la izquierda y abajo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija la imagen de fondo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .navbar-nav .nav-link {
@@ -34,10 +37,14 @@ section {
     fill: rgba(255, 255, 255, 0.55);
 }
 
+.content {
+    flex: 1;
+}
+
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
 .btn-login {
