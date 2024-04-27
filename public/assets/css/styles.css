@@ -2,19 +2,23 @@ body {
     /* Color de fondo */
     background-color: #38a8ae;
     /* Establece la imagen de fondo */
-    background-image: url('../../img/vet.png');
+    background-image: url('../../img/11.png');
     /* Establece cómo se muestra la imagen */
     background-size: auto 50%; /* Tamaño automático con el 50% de la altura */
     background-position: left bottom; /* Alinea la imagen a la izquierda y abajo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija la imagen de fondo */
+    margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 .navbar-nav .nav-link {
-    color: black; 
+    color: white; 
+}
+.navbar-nav:hover .nav-link:hover {
+    color: white;
 }
 
 h1 {
@@ -42,20 +46,25 @@ section {
 }
 
 footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
 
 .btn-login {
-    background-color: #d16253; /* Cambia el color de fondo */
-    border-color: #d16253; /* Cambia el color del borde */
+    background-color: #226669; /* Cambia el color de fondo */
+    border-color: #226669; /* Cambia el color del borde */
     color: #ffffff; /* Cambia el color del texto */
     padding: 6px;
 }
 
 .btn-login:hover {
-    background-color: #d16253; /* Cambia el color de fondo al pasar el cursor sobre el botón */
-    border-color: #2a7f83; /* Cambia el color del borde al pasar el cursor sobre el botón */
+    background-color: #09aab3; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    border-color: #09aab3; /* Cambia el color del borde al pasar el cursor sobre el botón */
     color: #ffffff; /* Cambia el color del texto al pasar el cursor sobre el botón */
+}
+
+a {
+    color: #2a7f83;
 }
