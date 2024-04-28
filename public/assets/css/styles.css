@@ -65,6 +65,29 @@ footer {
     color: #ffffff; /* Cambia el color del texto al pasar el cursor sobre el botón */
 }
 
+.btn {
+    background-color: #226669; /* Cambia el color de fondo */
+    border-color: #226669; /* Cambia el color del borde */
+    color: #ffffff; /* Cambia el color del texto */
+    padding: 6px;
+}
+
+.btn:hover {
+    background-color: #09aab3; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    border-color: #09aab3; /* Cambia el color del borde al pasar el cursor sobre el botón */
+    color: #ffffff; /* Cambia el color del texto al pasar el cursor sobre el botón */
+}
+
 a {
     color: #2a7f83;
+}
+
+form{
+    background-color:#38a8ae;
+    padding:40px;
+    max-width:700px;
+    margin: auto;
+    box-shadow: 0 0 25px #0009;
+    margin-top:50px;
+    margin-bottom: 50px;  
 }

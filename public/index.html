@@ -7,7 +7,7 @@
 	<title>VetBond - Encuentra Servicios Veterinarios</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link href="../public/assets/css/styles.css" rel="stylesheet">
+	<link href="/assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 		<nav class="navbar navbar-expand-sm ">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
-					<img src="../public/img/brandblanca.png" alt="VETBOND" width="150" height="35">
+					<img src="/img/brandblanca.png" alt="VETBOND" width="150" height="35">
 				</a>
 				<!-- Botón de Iniciar Sesión a la izquierda en pantallas pequeñas -->
 				<button class="navbar-toggler order-first" type="button" data-bs-toggle="collapse"
@@ -33,16 +33,18 @@
 							<a class="nav-link active" href="citasform.html">Formulario de Reserva</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="registro.html">Registrarse</a>
+							<a id="registerNavItem" class="nav-link active" href="registro.html">Registrarse</a>
 						</li>
 					</ul>
 				</div>
 				<!-- Botón de Iniciar Sesión -->
-				<a class="nav-link btn btn-login" href="login.html">Iniciar Sesión</a>
+				<a id="loginButton" class="nav-link btn btn-login" href="login.html">Iniciar Sesión</a>
+				<!-- Botón de Cerrar Sesión -->
+				<button id="logoutButton" class="nav-link btn btn-logout" style="display: none;">Cerrar Sesión</button>
+
 			</div>
 		</nav>
 	</header>
-
 
 	<!-- Main Content -->
 	<section id="intro" class="pt-5 pb-1 pb-sm-5 ">
@@ -57,7 +59,7 @@
 				<div class="col-lg-9">
 					<div id="homepage-search">
 						<div class="d-flex align-items-center pt-1 mb-1 navigation nav text-left">
-							<a class="btn">
+							<a class="btn mx-1">
 								<i class="svg-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
 										<path
@@ -82,7 +84,7 @@
 							<div class="tab-pane active align-items-start">
 								<div>
 									<div class="row"
-										style="padding: 20px; background-color: #2e989e; border-radius: 15px;">
+										style="padding: 20px; background-color: #2e989e; border-radius: 20px;">
 										<div class="col-md-5 col-12 specialists-col">
 											<div class="d-flex align-items-center">
 												<input placeholder="especialidad, servicio o veterinario"
@@ -140,8 +142,8 @@
 		</div>
 	</section>
 	<div class="bg-body-tertiary">
-        <!-- Contenido de la página aquí -->
-    </div>
+		<!-- Contenido de la página aquí -->
+	</div>
 
 	<!-- Footer -->
 	<footer class="bg-body-tertiary text-center py-4">
@@ -154,8 +156,9 @@
 
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-		crossorigin="anonymous"></script>
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+		</script>
+	<script src="index.js"></script>
 
 </body>
 
