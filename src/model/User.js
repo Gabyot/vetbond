@@ -20,6 +20,13 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  phone: {
+    type: String,
+  },
+  rut: {
+    type: String,
+    required: true
   }
 }, {
   // Configurar las opciones del esquema

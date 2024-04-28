@@ -4,7 +4,7 @@ import { createAccessToken } from '../lib/jwt.js'
 
 // Controlador para el registro de usuarios
 export const register = async (req, res) => {
-    const {email, password, name} = req.body
+    const {email, password, name, phone, rut} = req.body
 
     try {
         // Hash de la contraseña del usuario
@@ -13,7 +13,9 @@ export const register = async (req, res) => {
         const newUser = new User({
             name,
             email,
-            password: passwordHash
+            password: passwordHash,
+            phone,
+            rut
         })
         // Guardar el nuevo usuario en la base de datos
         const userSaved = await newUser.save();
@@ -26,6 +28,8 @@ export const register = async (req, res) => {
             id: userSaved._id,
             name: userSaved.name,
             email: userSaved.email,
+            phone: userSaved.phone?
+            rut: userSaved.rut,
             createdAt: userSaved.createdAt,
             updateAt: userSaved.updatedAt
         })
@@ -48,7 +52,7 @@ export const login = async (req, res) => {
 
         // Verificar si la contraseña proporcionada coincide con la contraseña almacenada
         const isMatch = await bcrypt.compare(password, userFound.password);
-        if(!isMatch) return res.status(400).json({ Message: "Invalid Credentials"});
+        if(!isMatch) return res.status(400).json({ message: "Invalid Credentials"});
         
         // Crear un token de acceso para el usuario autenticado
         const token = await createAccessToken({ id: userFound._id});
@@ -61,6 +65,7 @@ export const login = async (req, res) => {
             id: userFound._id,
             name: userFound.name,
             email: userFound.email,
+            rut: userFound.rut,
             createdAt: userFound.createdAt,
             updateAt: userFound.updatedAt
         });
