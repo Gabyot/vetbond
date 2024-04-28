@@ -3,11 +3,17 @@ import morgan from 'morgan';
 import authRoutes from './routes/authRoutes.js';
 import cookieParser from "cookie-parser";
 import cors from 'cors';
+import serviceRoutes from './routes/serviceRoutes.js';
+
 
 // Crear una instancia de la aplicación Express
 const app = express();
 
-app.use(cors());
+// Permitir solicitudes desde todos los orígenes
+app.use(cors({
+    origin: true,
+    credentials: true,
+  }));
 
 // Usar el middleware Morgan para el registro de solicitudes HTTP en el entorno de desarrollo
 app.use(morgan('dev'));
@@ -19,6 +25,11 @@ app.use(cookieParser());
 
 // Usar las rutas de autenticación bajo el prefijo '/api'
 app.use('/api', authRoutes);
+
+// Usar las rutas de servicios veterinarios bajo el prefijo '/api'
+app.use('/api', serviceRoutes);
+
+app.use(express.static('public')); // Servir archivos estáticos desde la carpeta 'public'
 
 
 
