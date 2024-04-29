@@ -98,5 +98,5 @@ export const profile = async (req, res) => {
         updateAt: userFound.updatedAt
     })
 
-    res.send('profile')
+
 }
