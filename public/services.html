@@ -2,103 +2,78 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>VetBond - Encuentra Servicios Veterinarios</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link href="../public/assets/css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetBond - Encuentra Servicios Veterinarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-	<!-- Header -->
-	<header>
-		<nav class="navbar navbar-expand-sm ">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="../public/img/brandblanca.png" alt="VETBOND" width="150" height="35">
-				</a>
-				<!-- Botón de Iniciar Sesión a la izquierda en pantallas pequeñas -->
-				<button class="navbar-toggler order-first" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="citasform.html">Formulario de Reserva</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="registro.html">Registrarse</a>
-						</li>
-					</ul>
-				</div>
-				<!-- Botón de Iniciar Sesión -->
-				<a class="nav-link btn btn-login" href="login.html">Iniciar Sesión</a>
-			</div>
-		</nav>
-	</header>
-    <div>Filtros: <select>
-        <option value="todos">Todos los servicios</option>
-        <option value="vacunacion">Vacunación</option>
-        <option value="cirugia">Cirugía</option>
-        <option value="consultas">Consultas</option>
-        <!-- Agrega más opciones según sea necesario -->
-    </select></div>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-sm ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/brandblanca.png" alt="VETBOND" width="150" height="35">
+                </a>
+                <!-- Botón de Iniciar Sesión a la izquierda en pantallas pequeñas -->
+                <button class="navbar-toggler order-first" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="citasform.html">Formulario de Reserva</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="registerNavItem" class="nav-link active" href="registro.html">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Botón de Iniciar Sesión -->
+                <a id="loginButton" class="nav-link btn btn-login" href="login.html">Iniciar Sesión</a>
+                <!-- Botón de Cerrar Sesión -->
+                <button id="logoutButton" class="nav-link btn btn-logout" style="display: none;">Cerrar Sesión</button>
 
-    <div class="container">
-        <h1>Servicios Veterinarios</h1>
+            </div>
+        </nav>
+    </header>
+    <h3 class="text-center">Servicios Veterinarios</h1>
+    <div class="filterContainer">Filtros: <select>
+            <option value="todos">Todos los servicios</option>
+            <option value="vacunacion">Vacunación</option>
+            <option value="cirugia">Cirugía</option>
+            <option value="consultas">Consultas</option>
+            <!-- Agrega más opciones según sea necesario -->
+        </select></div>
+
+    <div id="servicesContainer" class="row">
         <!-- Perfil veterinario -->
-        <div class="perfil-veterinario">
-            <h2>Dr. Juan Pérez</h2>
-            <p>Especialidades: Cirugía, Consultas, Vacunación</p>
-            <select>
-                <option value="cirugia">Cirugía</option>
-                <option value="consultas">Consultas</option>
-                <option value="vacunacion">Vacunación</option>
-                <!-- Agrega más opciones según sea necesario -->
-            </select>
-        </div>
-        <div class="perfil-veterinario">
-            <h2>Dr. Juan Pérez</h2>
-            <p>Especialidades: Cirugía, Consultas, Vacunación</p>
-            <select>
-                <option value="cirugia">Cirugía</option>
-                <option value="consultas">Consultas</option>
-                <option value="vacunacion">Vacunación</option>
-                <!-- Agrega más opciones según sea necesario -->
-            </select>
-        </div>
-        <div class="perfil-veterinario">
-            <h2>Dr. Juan Pérez</h2>
-            <p>Especialidades: Cirugía, Consultas, Vacunación</p>
-            <select>
-                <option value="cirugia">Cirugía</option>
-                <option value="consultas">Consultas</option>
-                <option value="vacunacion">Vacunación</option>
-                <!-- Agrega más opciones según sea necesario -->
-            </select>
-        </div>
         <!-- Agrega más perfiles veterinarios según sea necesario -->
     </div>
 
     <!-- Footer -->
-	<footer class="bg-body-tertiary text-center py-4">
-		<div class="container">
-			<p class="mb-0">¿Eres veterinario? Regístrate como <a href="#">Especialista</a>.</p>
-			<p class="mb-0">Visita nuestro <a href="#">Portalvet</a> para más recursos.</p>
-			<p class="mb-0">VetBond &copy; 2024 - Todos los derechos reservados.</p>
-		</div>
-	</footer>
+    <footer class="bg-body-tertiary text-center py-4">
+        <div class="container">
+            <p class="mb-0">¿Eres veterinario? Regístrate como <a href="#">Especialista</a>.</p>
+            <p class="mb-0">Visita nuestro <a href="#">Portalvet</a> para más recursos.</p>
+            <p class="mb-0">VetBond &copy; 2024 - Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="services.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
