@@ -4,6 +4,8 @@ import authRoutes from './routes/authRoutes.js';
 import cookieParser from "cookie-parser";
 import cors from 'cors';
 import serviceRoutes from './routes/serviceRoutes.js';
+import frontendRoutes from './routes/frontendRoutes.js'; 
+
 
 
 // Crear una instancia de la aplicación Express
@@ -29,7 +31,11 @@ app.use('/api', authRoutes);
 // Usar las rutas de servicios veterinarios bajo el prefijo '/api'
 app.use('/api', serviceRoutes);
 
-app.use(express.static('public')); // Servir archivos estáticos desde la carpeta 'public'
+// Usar las rutas del frontend
+app.use('/', frontendRoutes); 
+
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static('public')); 
 
 
 
