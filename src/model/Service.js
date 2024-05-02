@@ -15,7 +15,14 @@ const serviceSchema = new mongoose.Schema({
   },
   // Definir el campo 'fechas_disponibles' como un array de tipo String
   fechas_disponibles: [{
-    type: String
+    fecha: {
+      type: String,
+      required: true
+    },
+    horarios: {
+      type: [String],
+      required: true
+    }
   }],
   // Definir el campo 'profesional_veterinario' como un objeto con campos 'nombre' y 'rut'
   profesional_veterinario: {
