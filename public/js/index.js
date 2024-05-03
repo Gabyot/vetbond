@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (email) {
         var loginButton = document.getElementById('loginButton');
-        loginButton.textContent = 'Sesión Iniciada como: ' + email;
+        loginButton.textContent = 'Sesión Iniciada: ' + email;
         loginButton.addEventListener('click', function(event) {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
             // Realizar una solicitud a la API para cerrar la sesión del usuario
