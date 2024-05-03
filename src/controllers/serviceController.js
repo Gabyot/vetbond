@@ -15,6 +15,29 @@ export const getAllServices = async (req, res) => {
   }
 };
 
+// Controlador para encontrar un servicio por su ID
+export const findServiceById = async (req, res) => {
+  try {
+    // Obtener el ID del servicio de los parámetros de la solicitud
+    const { id } = req.params;
+
+    // Buscar el servicio en la base de datos por su ID
+    const service = await Service.findById(id);
+
+    // Verificar si se encontró el servicio
+    if (!service) {
+      return res.status(404).json({ error: 'Servicio no encontrado' });
+    }
+
+    // Devolver el servicio encontrado como respuesta
+    res.status(200).json(service);
+  } catch (error) {
+    // Manejar errores y devolver una respuesta de error
+    console.error('Error al encontrar el servicio por ID:', error);
+    res.status(500).json({ error: 'Hubo un error al encontrar el servicio por ID.' });
+  }
+};
+
 // Controlador para obtener todos los servicios veterinarios
 export const getAllCitys = async (req, res) => {
   try {

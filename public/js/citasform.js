@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     // Función para obtener los parámetros de la URL
     function getURLParams() {
         const params = new URLSearchParams(window.location.search);
@@ -48,6 +48,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Función para mostrar el nombre del servicio seleccionado
+    async function showServiceName() {
+        const { serviceId } = getURLParams();
+        try {
+            // Realizar la solicitud a tu API para obtener los detalles del servicio por su ID
+            const response = await fetch(`/api/service/${encodeURIComponent(serviceId)}`);
+            if (!response.ok) {
+                throw new Error('Error al obtener los detalles del servicio');
+            }
+            const data = await response.json();
+            const serviceName = data.nombre;
+            const vetName = data.profesional_veterinario.nombre;
+            // Concatenar el nombre del servicio y del veterinario, separados por un guion medio
+            const displayName = `${serviceName} - ${vetName}`;
+            // Actualizar la opción seleccionada en el select tipoServicio
+            const select = document.getElementById('tipoServicio'); // Suponiendo que el select tiene el id 'tipoServicio'
+            // Limpiar opciones anteriores
+            select.innerHTML = '';
+            const option = document.createElement('option');
+            option.value = serviceName;
+            option.textContent = displayName;
+            select.appendChild(option);
+        } catch (error) {
+            console.error('Error al obtener los detalles del servicio:', error);
+        }
+    }
+
     // Llamar a la función para actualizar el select de horarios cuando se cargue la página
     updateAvailableTimesSelect();
+
+    // Llamar a la función para mostrar el nombre del servicio cuando se cargue la página
+    await showServiceName();
 });
