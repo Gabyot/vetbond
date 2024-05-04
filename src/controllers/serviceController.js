@@ -1,11 +1,23 @@
 // Importar el modelo de Service
 import Service from '../model/Service.js';
 
-// Controlador para obtener todos los servicios veterinarios
+// Controlador para obtener todos los servicios veterinarios con filtro
 export const getAllServices = async (req, res) => {
   try {
-    // Buscar todos los servicios veterinarios en la base de datos
-    const services = await Service.find();
+    // Obtener los parámetros de consulta de la URL
+    const { especialidad, ciudad } = req.query;
+    let query = {};
+
+    // Construir la consulta basada en los parámetros recibidos
+    if (especialidad) {
+      query['nombre'] = especialidad;
+    }
+    if (ciudad) {
+      query['direccion.ciudad'] = ciudad;
+    }
+
+    // Buscar los servicios veterinarios en la base de datos con el filtro aplicado
+    const services = await Service.find(query);
 
     // Devolver los servicios encontrados como respuesta
     res.status(200).json(services);
@@ -14,6 +26,7 @@ export const getAllServices = async (req, res) => {
     res.status(500).json({ error: 'Hubo un error al buscar los servicios veterinarios.' });
   }
 };
+
 
 // Controlador para encontrar un servicio por su ID
 export const findServiceById = async (req, res) => {
@@ -88,6 +101,25 @@ export const getTimesForDate = async (req, res) => {
     res.status(500).json({ error: 'Hubo un error al obtener los horarios de la fecha especificada.' });
   }
 };
+
+// Controlador para obtener una lista de todos los nombres de servicios sin repetir
+export const getAllServiceNames = async (req, res) => {
+  try {
+    // Buscar todos los servicios en la base de datos
+    const services = await Service.find();
+
+    // Obtener todas las comunas únicas de los servicios
+    const uniqueServiceNames = [...new Set(services.map(service => service.nombre))];
+
+    // Devolver los nombres de los servicios encontrados como respuesta
+    res.status(200).json(uniqueServiceNames);
+  } catch (error) {
+    // Manejar errores y devolver una respuesta de error
+    console.error('Error al obtener los nombres de servicios.', error);
+    res.status(500).json({ error: 'Hubo un error al obtener los nombres de servicios.' });
+  }
+};
+
 
 
 

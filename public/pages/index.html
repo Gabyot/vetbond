@@ -13,7 +13,7 @@
 <body class="bg-body-tertiary justify-center">
 	<!-- Header -->
 	<header class=col-12>
-		<nav class="navbar navbar-expand-md">
+		<nav class="navbar navbar-expand-xl">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
 					<img src="/../img/brandblanca.png" alt="VETBOND" width="170" height="37">
@@ -27,13 +27,10 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/quienessomos">Quienes Somos</a>
+							<a class="nav-link active" aria-current="page" href="/quienessomos" style="color: #226669;">Quienes Somos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="services">Servicios Veterinarios</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="reserva">Formulario de Reserva</a>
+							<a class="nav-link active" href="services" style="color: #226669;">Todos los servicios</a>
 						</li>
 					</ul>
 				</div>
@@ -60,57 +57,39 @@
 					style="margin-top: 0rem; z-index: +1000;">
 						<div class="tab-content">
 							<div class="tab-pane active">
-									<div class="row py-2">
-										<div class="col-md-5 col-12 specialists-col my-2">
-											<div class="d-flex align-items-center">
-												<input placeholder="especialidad, servicio o veterinario"
-													class="form-control search-field mb-1 mb-md-0" value=""
-													type="text" />
-												<i
-													class="svg-icon svg-icon-caret svg-icon-size-12 svg-icon-color-white icon-trigger">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-														viewBox="0 0 24 24">
-														<path
-															d="M3.293 7.293a1 1 0 0 1 1.414 0L12 14.586l7.293-7.293a1 1 0 1 1 1.414 1.414l-8 8a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414Z" />
-													</svg>
-												</i>
-											</div>
-										</div>
-										<div class="col-md-4 col-12 my-2">
-											<div class="d-flex align-items-center">
-												<input placeholder="ciudad o comuna"
-													class="form-control search-field mb-1 mb-md-0" type="text"/>
-												<i
-													class="svg-icon svg-icon-caret svg-icon-size-12 svg-icon-color-white icon-trigger">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-														viewBox="0 0 24 24">
-														<path
-															d="M3.293 7.293a1 1 0 0 1 1.414 0L12 14.586l7.293-7.293a1 1 0 1 1 1.414 1.414l-8 8a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414Z" />
-													</svg>
-												</i>
-											</div>
-										</div>
-										<div class="col-md-3 col-12 button-col justify-center" >
-											<a href="/services">
-											<button class="btn btn-block btn-lg search-button btn-primary px-3"
-												title="Buscar"
-												style="background-color: #2b686bc0; border-color: white;">
-												<span class="d-inline-flex align-items-center">
-													<i class="svg-icon svg-icon-search svg-icon-color-white"
-														style="vertical-align: center; padding: 0.1rem">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-															viewBox="0 0 24 24">
-															<path
-																d="M14 9.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Zm-.665 5.249a6.5 6.5 0 1 1 1.414-1.414l4.958 4.958a1 1 0 0 1-1.414 1.414l-4.958-4.958Z" style="fill:white;"  />
-														</svg>
-													</i>
-												</span>
-											</button>
-										</a>
-										</div>
+								<div class="row py-2">
+									<!-- Input para seleccionar la especialidad, servicio o veterinario -->
+									<div class="col-md-5 col-12 specialists-col my-2">
+										<select id="especialidad" class="form-control search-field mb-1 mb-md-0">
+											<option value="">Todos los servicios</option>
+										</select>
 									</div>
+									<!-- Input para seleccionar la ciudad o comuna -->
+									<div class="col-md-4 col-12 my-2">
+										<select id="ciudad" class="form-control search-field mb-1 mb-md-0">
+											<option value="">Todas las comunas</option>
+										</select>
+									</div>
+									<!-- Botón de búsqueda -->
+									<div class="col-md-3 col-12 button-col justify-center">
+										<button id="buscar" class="btn btn-block btn-lg search-button btn-primary px-3"
+											title="Buscar"
+											style="background-color: #2b686bc0; border-color: white;">
+											<span class="d-inline-flex align-items-center">
+												<i class="svg-icon svg-icon-search svg-icon-color-white"
+													style="vertical-align: center; padding: 0.1rem">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24">
+														<path
+															d="M14 9.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Zm-.665 5.249a6.5 6.5 0 1 1 1.414-1.414l4.958 4.958a1 1 0 0 1-1.414 1.414l-4.958-4.958Z" style="fill:white;"  />
+													</svg>
+												</i>
+											</span>
+										</button>
+									</div>
+								</div>
 							</div>
-						</div>
+						</div>	
 				</div>
 			</div>
 		</div>
@@ -221,6 +200,7 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 		</script>
 	<script src="/../js/index.js"></script>
+	<script src="/../js/filtersServices.js"></script>
 
 </body>
 
