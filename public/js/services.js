@@ -67,7 +67,7 @@ function createServiceCard(service) {
             <div class="card-body">
                 <div class="row">
                     <div class="col-3">
-                        <img src="https://s3.sa-east-1.amazonaws.com/doctoralia.cl/doctor/cdfac5/cdfac5ee16c2c04eb8ebb494f215f4b7_large.jpg" alt="Imagen del veterinario" class="img-fluid">
+                        <img src="../img/imag_veterinarios/${service.profesional_veterinario.rut}.jpeg" alt="Imagen del veterinario" class="img-fluid">
                     </div>
                     <div class="col-8">
                         <h5 class="card-title text-start">${service.profesional_veterinario.nombre}</h5>
