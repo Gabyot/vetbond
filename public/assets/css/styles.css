@@ -18,12 +18,10 @@ header {
     margin: auto;
 }
 
-.navbar-nav .nav-link {
-    color: white;
-}
 
-.navbar-nav:hover .nav-link:hover {
-    color: white;
+.nav-link:hover {
+    color: #226669;
+    box-shadow: #226669;
 }
 
 h1 {
@@ -46,7 +44,7 @@ h6 {
     font-size: small;
 }
 
-.nav-item {
+.nav-item:hover {
     color: white;
 }
 
@@ -65,20 +63,20 @@ footer {
 .btn-login {
     background-color: #226669;
     /* Cambia el color de fondo */
-    border-color: #e0f9fa;
+    border-color: white;
     /* Cambia el color del borde */
-    color: #ffffff;
+    color: white;
     /* Cambia el color del texto */
-    padding: 6px;
+    padding: 0.5rem;
     margin-right: 0.5rem;
 }
 
 .btn-login:hover {
-    background-color: #09aab3;
+    background-color: #09abb300;
     /* Cambia el color de fondo al pasar el cursor sobre el botón */
-    border-color: #09aab3;
+    border-color: #226669;
     /* Cambia el color del borde al pasar el cursor sobre el botón */
-    color: #ffffff;
+    color: #226669;
     /* Cambia el color del texto al pasar el cursor sobre el botón */
 }
 
@@ -87,22 +85,26 @@ footer {
     /* Cambia el color de fondo */
     border-color: white;
     /* Cambia el color del borde */
-    color: #ffffff;
+    color: white;
     /* Cambia el color del texto */
     padding: 0.5rem;
 }
 
 .btn:hover {
-    background-color: #09aab3;
+    background-color: #09abb300;
     /* Cambia el color de fondo al pasar el cursor sobre el botón */
-    border-color: #09aab3;
+    border-color: #226669;
     /* Cambia el color del borde al pasar el cursor sobre el botón */
-    color: #ffffff;
+    color: #226669;
     /* Cambia el color del texto al pasar el cursor sobre el botón */
+    text-shadow: #226669;
 }
 
 a {
     color: #2a7f83;
+}
+a:hover{
+    color: #3eb9bf;
 }
 
 form {
@@ -111,7 +113,7 @@ form {
     margin: auto;
     margin-bottom: 1rem;
     background-color: #ffffff;
-    border: 1px solid #38a8ae;
+    border: 1px solid #226669;
     border-radius: 8px;
     width: auto;
     height: auto;
@@ -121,19 +123,19 @@ form {
 select {
     color: gray;
     border-radius: 1ch;
-    border: 1px solid #38a8ae;
+    border: 1px solid #226669;
     padding: 0.4rem;
     width: 15rem;
 }
 
 /* Estilos para las tarjetas de servicio */
 .card {
-    border: 1px solid #38a8ae;
+    border: 1px solid #226669;
     border-radius: 8px;
     margin-bottom: 1em;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: auto;
-    max-width: 45rem;
+    max-width: 75%;
     margin: auto;
 }
 
@@ -182,7 +184,7 @@ select {
 
 #loginForm {
     background-color: #ffffff;
-    border: 1px solid #38a8ae;
+    border: 1px solid #226669;
     border-radius: 8px;
     width: auto;
     height: auto;
@@ -198,7 +200,7 @@ select {
 
 .infoCard{
     padding: 1rem;
-    border: 1px solid #38a8ae;
+    border: 1px solid #226669;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: auto;
