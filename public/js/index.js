@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         loginButton.textContent = 'Sesión Iniciada: ' + email;
         loginButton.addEventListener('click', function(event) {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+             // Redirigir al usuario a la página de perfil
+             window.location.href = '/profile';
             // Realizar una solicitud a la API para cerrar la sesión del usuario
             fetch('http://localhost:3000/api/profile', {
                 method: 'GET',

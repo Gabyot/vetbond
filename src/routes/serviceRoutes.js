@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { findServiceById, getAllCitys, getAllServices, getAllServiceNames, getTimesForDate } from "../controllers/serviceController.js";
-import { authRequire } from "../middlewares/validateToken.js";
+
 
 const router = Router();
 

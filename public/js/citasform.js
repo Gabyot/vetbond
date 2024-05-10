@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function () {
+    console.log('DOMContentLoaded event triggered');
     // Función para obtener los parámetros de la URL
     function getURLParams() {
         const params = new URLSearchParams(window.location.search);
@@ -75,9 +76,95 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
+    // Función para verificar la autenticación del usuario
+    async function checkAuthentication() {
+        try {
+            // Realizar una solicitud a la API para verificar la autenticación del usuario
+            const response = await fetch('/api/check-authentication', {
+                method: 'GET',
+                credentials: 'include' // Incluir cookies en la solicitud
+            });
+            if (!response.ok) {
+                throw new Error('Error al verificar la autenticación');
+            }
+            const data = await response.json();
+            return data.authenticated; // Devuelve true si el usuario está autenticado, false de lo contrario
+        } catch (error) {
+            console.error('Error al verificar la autenticación:', error);
+            return false; // En caso de error, asumimos que el usuario no está autenticado
+        }
+    }
+
+    // Función para manejar el envío del formulario de reserva de cita
+    async function handleAppointmentFormSubmit(event) {
+        event.preventDefault(); // Evita que el formulario se envíe normalmente
+
+        // Verificar la autenticación del usuario
+        const isAuthenticated = await checkAuthentication();
+        if (!isAuthenticated) {
+            // Mostrar un mensaje de alerta
+            alert('Para reservar una cita, primero debes iniciar sesión.');
+            // Obtener la URL actual
+            const currentUrl = window.location.href;
+            // Redirigir al usuario a la página de inicio de sesión, pasando la URL actual como parámetro de consulta
+            window.location.href = '/login?redirect=' + encodeURIComponent(currentUrl);
+            return;
+        }
+
+        // Obtener los datos del formulario de reserva de cita
+        const serviceId = getURLParams().serviceId;
+        const fecha = getURLParams().fecha;
+        const hora = document.getElementById('horaCita').value;
+        const descripcion = document.getElementById('Cita').value;
+        const paciente = document.getElementById('nombreMascota').value;
+        const especie = document.getElementById('tipoMascota').value;
+
+        console.log(serviceId, fecha, hora, descripcion, paciente, especie);
+
+        try {
+            // Realizar una solicitud a la API para crear una cita
+            const response = await fetch('/api/appointments/create', {
+                method: 'POST',
+                credentials: 'include', // Incluir cookies en la solicitud
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    serviceId,
+                    fecha,
+                    hora,
+                    descripcion,
+                    paciente,
+                    especie
+                })
+            });
+            if (!response.ok) {
+                throw new Error('Error al crear la cita');
+            }
+            const data = await response.json();
+            alert(data.message); // Muestra un mensaje de éxito
+            // Redirigir a una página de confirmación de cita u otra página deseada
+            window.location.href = '/profile';
+        } catch (error) {
+            console.error('Error al crear la cita:', error);
+            // Manejar el error, mostrar un mensaje de error, etc.
+        }
+    }
+
     // Llamar a la función para actualizar el select de horarios cuando se cargue la página
     updateAvailableTimesSelect();
 
     // Llamar a la función para mostrar el nombre del servicio cuando se cargue la página
     await showServiceName();
+
+    // Agregar un evento de escucha para el envío del formulario de reserva de cita
+    const appointmentForm = document.querySelector('form'); // Suponiendo que tu formulario tiene un contenedor con la clase 'card'
+    console.log('appointmentForm:', appointmentForm);
+    if (appointmentForm) {
+        console.log('Adding event listener for form submission');
+        appointmentForm.addEventListener('submit', async function (event) {
+            console.log('Form submission event triggered');
+            await handleAppointmentFormSubmit(event);
+        });
+    }
 });

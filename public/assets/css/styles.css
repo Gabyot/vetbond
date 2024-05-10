@@ -49,7 +49,7 @@ h6 {
 }
 
 .svg-icon path {
-    fill: rgba(255, 255, 255, 0.55);
+    fill: #226669
 }
 
 footer {
@@ -64,11 +64,13 @@ footer {
     background-color: #226669;
     /* Cambia el color de fondo */
     border-color: white;
+    border-radius: 8px;
     /* Cambia el color del borde */
     color: white;
     /* Cambia el color del texto */
-    padding: 0.5rem;
-    margin-right: 0.5rem;
+    padding: 1rem;
+    margin: auto;
+    margin-right: 1rem;
 }
 
 .btn-login:hover {
@@ -100,9 +102,22 @@ footer {
     text-shadow: #226669;
 }
 
-a {
-    color: #2a7f83;
+.link {
+    color: white;
+    background-color: #226669;
+    /* Cambia el color de fondo */
+    border-color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
 }
+
+.link:hover {
+    color: #226669;
+    background-color: rgb(255, 255, 255);
+    /* Cambia el color de fondo */
+    border-color: #226669;
+}
+
 a:hover{
     color: #3eb9bf;
 }
@@ -140,6 +155,8 @@ select {
 }
 
 .card-body {
+    border: 1px solid #226669;
+    border-radius: 8px;
     padding: 20px;
 }
 
@@ -227,4 +244,5 @@ select {
 .lead {
     margin: auto;
 }
+
 

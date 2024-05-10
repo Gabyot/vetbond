@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import cors from 'cors';
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
+import appointmentRoutes from './routes/appointmentRoutes.js'; 
 
 
 
@@ -30,6 +31,9 @@ app.use('/api', authRoutes);
 
 // Usar las rutas de servicios veterinarios bajo el prefijo '/api'
 app.use('/api', serviceRoutes);
+
+// Usar las rutas de citas bajo el prefijo '/api'
+app.use('/api', appointmentRoutes);
 
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 

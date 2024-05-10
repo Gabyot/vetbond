@@ -66,18 +66,25 @@ function createServiceCard(service) {
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-4">
                         <img src="../img/imag_veterinarios/${service.profesional_veterinario.rut}.jpeg" alt="Imagen del veterinario" class="img-fluid">
                     </div>
-                    <div class="col-8">
+                    <div class="col-8" style="padding-right:3rem">
                         <h5 class="card-title text-start">${service.profesional_veterinario.nombre}</h5>
                         <p class="text-start"><a href="#">Opiniones</a></p>
-                        <p class="card-text ciudad">Dirección: ${service.direccion.calle} ${service.direccion.numero}, ${service.direccion.ciudad}, ${service.direccion.pais}</p>
+                        <p class="card-text ciudad"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                    </svg> ${service.direccion.calle} ${service.direccion.numero}, ${service.direccion.ciudad}, ${service.direccion.pais}</p>
                         <span class="d-flex justify-between-center">
-                            <p class="card-text">${service.nombre}</p>
-                            <p class="card-text ms-auto mr-8">Precio: ${service.precio}</p>
+                            <p class="card-text"><i class="svg-icon svg-icon-stethoscope svg-icon-size-16 svg-icon-color-gray-900" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 2a1 1 0 1 0 0 2h1v7c0 1.55-1.453 3-3.5 3C6.453 14 5 12.55 5 11V4h1a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1v8c0 2.536 2.013 4.496 4.5 4.916V19c0 .546.195 1.295.757 1.919C8.847 21.575 9.758 22 11 22h5c.493 0 1.211-.14 1.834-.588C18.51 20.925 19 20.125 19 19v-1.17a3.001 3.001 0 1 0-2 0V19c0 .474-.175.674-.334.788-.21.152-.493.212-.666.212h-5c-.758 0-1.097-.242-1.257-.419A.945.945 0 0 1 9.5 19v-3.084c2.487-.42 4.5-2.38 4.5-4.916V3a1 1 0 0 0-1-1h-2Zm7 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg></i>
+                            ${service.nombre}</p>
+                            <p class="card-text ms-auto">💲${service.precio}</p>
                         </span>
-                        <p class="card-text">Fechas Disponibles:</p>
+                        <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 3h-1V2c0-.55-.45-1-1-1s-1 .45-1 1v1H8V2c0-.55-.45-1-1-1s-1 .45-1 1v1H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1 .89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 17H5V8h14v12z"/>
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                      </svg>  Fechas Disponibles:</p>
                         <div id="dates-${service._id}">
                         </div>
                     </div>
@@ -87,22 +94,26 @@ function createServiceCard(service) {
     `;
 
     const datesContainer = serviceCard.querySelector(`#dates-${service._id}`);
-    if (service.fechas_disponibles && Array.isArray(service.fechas_disponibles)) {
-        service.fechas_disponibles.forEach(dateObj => {
-            const date = dateObj.fecha;
-            const dateButton = document.createElement('button');
-            dateButton.classList.add('btn', 'btn-primary', 'mb-2');
-            dateButton.textContent = date;
-            dateButton.addEventListener('click', function () {
-                const serviceId = service._id;
-                window.location.href = `/reserva?id=${encodeURIComponent(serviceId)}&fecha=${encodeURIComponent(date)}`;
-            });
-            datesContainer.appendChild(dateButton);
+if (service.fechas_disponibles && Array.isArray(service.fechas_disponibles)) {
+    service.fechas_disponibles.forEach(dateObj => {
+        const date = new Date(dateObj.fecha);
+        
+        // Formatear la fecha en el formato deseado (día/mes/año)
+        const formattedDate = date.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: '2-digit' });
+
+        const dateButton = document.createElement('button');
+        dateButton.classList.add('btn', 'btn-primary', 'mb-2');
+        dateButton.textContent = formattedDate;
+        dateButton.addEventListener('click', function () {
+            const serviceId = service._id;
+            window.location.href = `/reserva?id=${encodeURIComponent(serviceId)}&fecha=${encodeURIComponent(dateObj.fecha)}`;
         });
-    } else {
-        console.error('Error al crear tarjeta de servicio: las fechas disponibles son inválidas.');
-    }
-    return serviceCard;
+        datesContainer.appendChild(dateButton);
+    });
+} else {
+    console.error('Error al crear tarjeta de servicio: las fechas disponibles son inválidas.');
+}
+return serviceCard;
 }
 
 async function loadSelectedValues() {

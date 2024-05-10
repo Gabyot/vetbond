@@ -1,6 +1,8 @@
 import User from '../model/User.js'
 import bcrypt from 'bcryptjs'
 import { createAccessToken } from '../lib/jwt.js'
+import { TOKEN_SECRET } from '../config.js'
+import jwt from 'jsonwebtoken'
 
 // Controlador para el registro de usuarios
 export const register = async (req, res) => {
@@ -97,6 +99,21 @@ export const profile = async (req, res) => {
         createdAt: userFound.createdAt,
         updateAt: userFound.updatedAt
     })
-
-
 }
+
+// Controlador para verificar si el usuario está autenticado
+export const checkAuthentication = (req, res) => {
+    try {
+        // Verificar la validez del token utilizando el secreto del token
+        jwt.verify(req.cookies.token, TOKEN_SECRET, (err, decoded) => {
+            // Si hay un error o no se puede decodificar el token, devolver un mensaje de no autenticado
+            if (err) return res.status(401).json({ authenticated: false });
+
+            // Si el token es válido, devolver un mensaje de autenticado
+            res.status(200).json({ authenticated: true });
+        });
+    } catch (error) {
+        // Manejar errores y enviar una respuesta de error
+        res.status(500).json({ message: error.message });
+    }
+};

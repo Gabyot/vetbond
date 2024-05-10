@@ -1,5 +1,7 @@
 import { Router } from "express";
 import path from "path";
+import { authRequire } from "../middlewares/validateToken.js";
+
 
 const router = Router();
 
@@ -25,6 +27,10 @@ router.get('/register', (req, res) => {
 
 router.get('/quienessomos', (req, res) => {
     res.sendFile(path.resolve('public/pages/quienessomos.html'));
+});
+
+router.get('/profile', (req, res) => {
+    res.sendFile(path.resolve('public/pages/userprofile.html'));
 });
 
 

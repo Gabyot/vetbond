@@ -27,8 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     // El inicio de sesión fue exitoso
                     alert('Inicio de sesión exitoso!');
                     localStorage.setItem('email', email);
-                    // Redirigir a otra página, por ejemplo:
-                    window.location.href = '/';
+                    // Obtener el parámetro de consulta 'redirect' de la URL
+                    const params = new URLSearchParams(window.location.search);
+                    const redirectUrl = params.get('redirect');
+                    // Redirigir al usuario de vuelta a la URL guardada antes de iniciar sesión
+                    if (redirectUrl) {
+                        window.location.href = redirectUrl;
+                    } else {
+                        // Si no hay URL de redirección, redirigir al usuario a una página por defecto
+                        window.location.href = '/';
+                    }
                 } else {
                     // El inicio de sesión falló, mostrar mensaje de error
                     alert('Error al iniciar sesión: ' + data.message);
