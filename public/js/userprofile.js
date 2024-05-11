@@ -105,8 +105,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <hr>
 							<div class="row my-4">
 								<div class="col-md-12" >
-                                    <button class="link col-md-6" href="/">Editar datos de la cita</button>
-                                    <button class="link col-md-5" href="/profile">Cancelar cita</button>
+                                    <button class="link col-md-6" href="/">Dejar opinión</button>
 								</div>
                             </div>
                         </div>
