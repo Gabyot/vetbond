@@ -106,5 +106,61 @@ export const getAppointmentsByUserId = async (req, res) => {
     }
 };
 
+// Controlador para eliminar una cita por su ID
+export const deleteAppointmentById = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Utilizar el método findByIdAndDelete() para eliminar la cita por su ID
+        const deletedAppointment = await Appointment.findByIdAndDelete(id);
+
+        if (!deletedAppointment) {
+            return res.status(404).json({ message: "Cita no encontrada" });
+        }
+
+        res.status(200).json({ message: "Cita eliminada exitosamente" });
+    } catch (error) {
+        // Manejar errores y enviar una respuesta de error
+        res.status(500).json({ message: error.message });
+    }
+};
+
+// Controlador para obtener una cita por su ID
+export const getAppointmentById = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Utilizar el método findById() para encontrar la cita por su ID
+        const appointment = await Appointment.findById(id);
+
+        if (!appointment) {
+            return res.status(404).json({ message: "Cita no encontrada" });
+        }
+
+        // Obtener información adicional del servicio asociado a la cita
+        const service = await Service.findById(appointment.servicio);
+
+        if (!service) {
+            return res.status(404).json({ message: "Servicio asociado no encontrado" });
+        }
+
+        // Devolver la cita con información adicional del servicio como respuesta
+        res.status(200).json({
+            cita: appointment,
+            servicio: {
+                nombre: service.nombre,
+                precio: service.precio,
+                direccion: service.direccion,
+                veterinario: {
+                    nombre: service.profesional_veterinario.nombre,
+                    rut: service.profesional_veterinario.rut
+                }
+            }
+        });
+    } catch (error) {
+        // Manejar errores y enviar una respuesta de error
+        res.status(500).json({ message: error.message });
+    }
+};
 
 

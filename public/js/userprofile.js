@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         // Iterar sobre cada cita y agregarla al contenedor correspondiente
         appointments.forEach(appointment => {
+            const appointmentId = appointment.cita._id;
+            console.log(appointmentId)
             // Formatear la fecha
             const citaDate = new Date(appointment.cita.fecha);
             const fechaFormateada = citaDate.toLocaleDateString('es-ES', {
@@ -59,22 +61,31 @@ document.addEventListener('DOMContentLoaded', async function () {
                                  ${appointment.servicio.direccion.calle} ${appointment.servicio.direccion.numero}, ${appointment.servicio.direccion.ciudad}</p>
                                     <p class="mb-2"><i class="svg-icon" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 2a1 1 0 1 0 0 2h1v7c0 1.55-1.453 3-3.5 3C6.453 14 5 12.55 5 11V4h1a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1v8c0 2.536 2.013 4.496 4.5 4.916V19c0 .546.195 1.295.757 1.919C8.847 21.575 9.758 22 11 22h5c.493 0 1.211-.14 1.834-.588C18.51 20.925 19 20.125 19 19v-1.17a3.001 3.001 0 1 0-2 0V19c0 .474-.175.674-.334.788-.21.152-.493.212-.666.212h-5c-.758 0-1.097-.242-1.257-.419A.945.945 0 0 1 9.5 19v-3.084c2.487-.42 4.5-2.38 4.5-4.916V3a1 1 0 0 0-1-1h-2Zm7 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg></i>
                                     ${appointment.servicio.nombre} - 💲${appointment.servicio.precio}</p>
-                                    <p><strong>Paciente:</strong> ${appointment.cita.paciente} (${appointment.cita.especie})</p>
+                                    <p class="mb-2">🐾  ${appointment.cita.paciente} (${appointment.cita.especie})</p>
                                 </div>
                             </div>
                             <hr>
 							<div class="row my-4">
 								<div class="col-md-12" >
-                                    <button class="link col-md-6" href="/">Editar datos de la cita</button>
-                                    <button class="link col-md-5" href="/profile">Cancelar cita</button>
+
+                                    <button class="link col-md-12" id="cancelar-cita-${appointmentId}">Cancelar cita</button>
 								</div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-            `;
+                    </div>    
+                    `;
                 citasProgramadasContainer.innerHTML += citaHTML;
+
+                // Seleccionar todos los botones "Cancelar cita"
+                const cancelarCitaButtons = document.querySelectorAll('[id^="cancelar-cita-"]');
+
+                // Iterar sobre cada botón y agregarle el evento click
+                cancelarCitaButtons.forEach(button => {
+                    // Agregar el evento click
+                    button.addEventListener('click', handleCancelAppointment(appointmentId));
+                });
+
             } else {
                 // Agregar la cita al contenedor de citas completadas
                 const citaHTML = `
@@ -99,19 +110,19 @@ document.addEventListener('DOMContentLoaded', async function () {
                                  ${appointment.servicio.direccion.calle} ${appointment.servicio.direccion.numero}, ${appointment.servicio.direccion.ciudad}</p>
                                     <p class="mb-2"><i class="svg-icon" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 2a1 1 0 1 0 0 2h1v7c0 1.55-1.453 3-3.5 3C6.453 14 5 12.55 5 11V4h1a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1v8c0 2.536 2.013 4.496 4.5 4.916V19c0 .546.195 1.295.757 1.919C8.847 21.575 9.758 22 11 22h5c.493 0 1.211-.14 1.834-.588C18.51 20.925 19 20.125 19 19v-1.17a3.001 3.001 0 1 0-2 0V19c0 .474-.175.674-.334.788-.21.152-.493.212-.666.212h-5c-.758 0-1.097-.242-1.257-.419A.945.945 0 0 1 9.5 19v-3.084c2.487-.42 4.5-2.38 4.5-4.916V3a1 1 0 0 0-1-1h-2Zm7 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg></i>
                                     ${appointment.servicio.nombre} - 💲${appointment.servicio.precio}</p>
-                                    <p><strong>Paciente:</strong> ${appointment.cita.paciente} (${appointment.cita.especie})</p>
+                                    <p><strong>🐾</strong> ${appointment.cita.paciente} (${appointment.cita.especie})</p>
                                 </div>
                             </div>
                             <hr>
 							<div class="row my-4">
 								<div class="col-md-12" >
-                                    <button class="link col-md-6" href="/">Dejar opinión</button>
+                                    <button class="link col-md-12" href="/">Dejar opinión</button>
 								</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            `;
+                `;
                 citasCompletadasContainer.innerHTML += citaHTML;
             }
         });
@@ -119,5 +130,34 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.error('Error al obtener las citas del usuario:', error);
     }
 });
+
+// Función externa para manejar el evento click
+function handleCancelAppointment(appointmentId) {
+    return async function () {
+        // Mostrar mensaje de confirmación al usuario
+        const confirmacion = confirm("¿Estás seguro de que quieres cancelar esta cita?");
+        if (confirmacion) {
+            try {
+                // Realizar una solicitud para eliminar la cita por su ID al servidor
+                const response = await fetch(`/api/appointment/delete/${appointmentId}`);
+
+                // Verificar si la solicitud fue exitosa
+                if (response.ok) {
+                    // Mostrar un mensaje de éxito al usuario
+                    alert("La cita ha sido cancelada exitosamente.");
+                    // Actualizar las citas en la interfaz o recargar la página si es necesario
+                    location.reload(); // Recargar la página
+                } else {
+                    // Mostrar un mensaje de error si la solicitud falla
+                    alert("Error al cancelar la cita. Por favor, inténtalo de nuevo más tarde.");
+                }
+            } catch (error) {
+                // Capturar y mostrar errores si la solicitud falla
+                console.error('Error al cancelar la cita:', error);
+                alert("Error al cancelar la cita. Por favor, inténtalo de nuevo más tarde.");
+            }
+        }
+    };
+}
 
 

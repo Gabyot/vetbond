@@ -53,7 +53,7 @@ h6 {
 }
 
 footer {
-    position: fixed;
+
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -197,6 +197,7 @@ select {
     display: flex;
     justify-content: center;
     margin-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 #loginForm {
@@ -211,7 +212,6 @@ select {
 .infoSection{
     justify-content: space-between;
     padding: 12rem;
-    margin-bottom: 8rem;
     min-width: 75%;
 }
 
