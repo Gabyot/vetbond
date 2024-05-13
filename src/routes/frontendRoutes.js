@@ -33,5 +33,8 @@ router.get('/profile', (req, res) => {
     res.sendFile(path.resolve('public/pages/userprofile.html'));
 });
 
+router.get('/profile/review/:id', (req, res) => {
+    res.sendFile(path.resolve('public/pages/commentPage.html'));
+});
 
 export default router;

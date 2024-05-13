@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         // Iterar sobre cada cita y agregarla al contenedor correspondiente
         appointments.forEach(appointment => {
             const appointmentId = appointment.cita._id;
-            console.log(appointmentId)
             // Formatear la fecha
             const citaDate = new Date(appointment.cita.fecha);
             const fechaFormateada = citaDate.toLocaleDateString('es-ES', {
@@ -67,8 +66,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <hr>
 							<div class="row my-4">
 								<div class="col-md-12" >
-
-                                    <button class="link col-md-12" id="cancelar-cita-${appointmentId}">Cancelar cita</button>
+                                    <button class="link col-md-12" data-appointment-id="${appointment.cita._id}" id="cancelar-cita">Cancelar cita</button>
 								</div>
                             </div>
                         </div>
@@ -76,16 +74,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                     </div>    
                     `;
                 citasProgramadasContainer.innerHTML += citaHTML;
-
-                // Seleccionar todos los botones "Cancelar cita"
-                const cancelarCitaButtons = document.querySelectorAll('[id^="cancelar-cita-"]');
-
-                // Iterar sobre cada botón y agregarle el evento click
-                cancelarCitaButtons.forEach(button => {
-                    // Agregar el evento click
-                    button.addEventListener('click', handleCancelAppointment(appointmentId));
-                });
-
             } else {
                 // Agregar la cita al contenedor de citas completadas
                 const citaHTML = `
@@ -116,7 +104,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <hr>
 							<div class="row my-4">
 								<div class="col-md-12" >
-                                    <button class="link col-md-12" href="/">Dejar opinión</button>
+                                <button class="link col-md-12" data-appointment-id="${appointment.cita._id}" id="dejar-opinion">Dejar opinión</button>
 								</div>
                             </div>
                         </div>
@@ -129,35 +117,60 @@ document.addEventListener('DOMContentLoaded', async function () {
     } catch (error) {
         console.error('Error al obtener las citas del usuario:', error);
     }
+
+    // Luego, fuera del bucle forEach, configura el event listener para todos los botones "Dejar opinión"
+    const reviewButtons = document.querySelectorAll('[id^="dejar-opinion"]');
+
+    reviewButtons.forEach(button => {
+        button.addEventListener('click', handleReviewAppointment);
+    });
+
+    // Seleccionar todos los botones "Cancelar cita"
+    const cancelarCitaButtons = document.querySelectorAll('[id^="cancelar-cita"]');
+
+    // Iterar sobre cada botón y agregarle el evento click
+    cancelarCitaButtons.forEach(button => {
+        // Agregar el evento click
+        button.addEventListener('click', handleCancelAppointment);
+    });
 });
 
-// Función externa para manejar el evento click
-function handleCancelAppointment(appointmentId) {
-    return async function () {
-        // Mostrar mensaje de confirmación al usuario
-        const confirmacion = confirm("¿Estás seguro de que quieres cancelar esta cita?");
-        if (confirmacion) {
-            try {
-                // Realizar una solicitud para eliminar la cita por su ID al servidor
-                const response = await fetch(`/api/appointment/delete/${appointmentId}`);
 
-                // Verificar si la solicitud fue exitosa
-                if (response.ok) {
-                    // Mostrar un mensaje de éxito al usuario
-                    alert("La cita ha sido cancelada exitosamente.");
-                    // Actualizar las citas en la interfaz o recargar la página si es necesario
-                    location.reload(); // Recargar la página
-                } else {
-                    // Mostrar un mensaje de error si la solicitud falla
-                    alert("Error al cancelar la cita. Por favor, inténtalo de nuevo más tarde.");
-                }
-            } catch (error) {
-                // Capturar y mostrar errores si la solicitud falla
-                console.error('Error al cancelar la cita:', error);
+// Finalmente, ajusta la función handleReviewAppointment para que recupere el id de la cita desde el atributo data
+function handleReviewAppointment(event) {
+    // Recuperar el id de la cita del atributo data del botón
+    const appointmentId = event.target.getAttribute('data-appointment-id');
+    // Redirigir al usuario a la página de revisión con el ID de la cita
+    window.location.href = `/profile/review/${appointmentId}`;
+}
+
+// Función externa para manejar el evento click
+async function handleCancelAppointment(event) {
+    const appointmentId = event.target.getAttribute('data-appointment-id');
+    // Mostrar mensaje de confirmación al usuario
+    const confirmacion = confirm("¿Estás seguro de que quieres cancelar esta cita?");
+    if (confirmacion) {
+        try {
+            // Realizar una solicitud para eliminar la cita por su ID al servidor
+            const response = await fetch(`/api/appointment/delete/${appointmentId}`);
+
+            // Verificar si la solicitud fue exitosa
+            if (response.ok) {
+                // Mostrar un mensaje de éxito al usuario
+                alert("La cita ha sido cancelada exitosamente.");
+                // Actualizar las citas en la interfaz o recargar la página si es necesario
+                location.reload(); // Recargar la página
+            } else {
+                // Mostrar un mensaje de error si la solicitud falla
                 alert("Error al cancelar la cita. Por favor, inténtalo de nuevo más tarde.");
             }
+        } catch (error) {
+            // Capturar y mostrar errores si la solicitud falla
+            console.error('Error al cancelar la cita:', error);
+            alert("Error al cancelar la cita. Por favor, inténtalo de nuevo más tarde.");
         }
-    };
-}
+    }
+};
+
 
 
