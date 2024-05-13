@@ -6,6 +6,7 @@ import cors from 'cors';
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
 import appointmentRoutes from './routes/appointmentRoutes.js'; 
+import reviewRoutes from './routes/reviewRoutes.js'
 
 
 
@@ -34,6 +35,9 @@ app.use('/api', serviceRoutes);
 
 // Usar las rutas de citas bajo el prefijo '/api'
 app.use('/api', appointmentRoutes);
+
+// Usar las rutas de citas bajo el prefijo '/api'
+app.use('/api', reviewRoutes);
 
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 

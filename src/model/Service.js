@@ -33,7 +33,7 @@ const serviceSchema = new mongoose.Schema({
     rut: {
       type: String,
       required: true
-    }
+    },
   },
   // Definir el campo 'direccion' como un objeto con campos 'calle', 'numero', 'ciudad' y 'pais'
   direccion: {

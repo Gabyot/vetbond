@@ -71,7 +71,7 @@ function createServiceCard(service) {
                     </div>
                     <div class="col-8" style="padding-right:3rem">
                         <h5 class="card-title text-start">${service.profesional_veterinario.nombre}</h5>
-                        <p class="text-start"><a href="#">Opiniones</a></p>
+                        <p class="text-start"><a href="/vetprofile/${service._id}">Opiniones</a></p>
                         <p class="card-text ciudad"><i class="svg-icon" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
                         

@@ -37,4 +37,8 @@ router.get('/profile/review/:id', (req, res) => {
     res.sendFile(path.resolve('public/pages/commentPage.html'));
 });
 
+router.get('/vetprofile/:id', (req, res) => {
+    res.sendFile(path.resolve('public/pages/vetProfile.html'));
+});
+
 export default router;

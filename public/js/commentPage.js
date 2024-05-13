@@ -3,8 +3,53 @@ const pathSegments = window.location.pathname.split('/');
 const appointmentId = pathSegments[pathSegments.length - 1];
 
 // Llamar a la función para cargar los datos de la cita cuando la página se cargue
-document.addEventListener('DOMContentLoaded', loadAppointmentData(appointmentId));
+document.addEventListener('DOMContentLoaded', () => {
+    loadAppointmentData(appointmentId)
+    const form = document.querySelector('.form');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Evita que el formulario se envíe normalmente
 
+        if (!servicioId) {
+            console.error('Error: No se pudo obtener el ID del servicio');
+            return;
+        }
+
+        // Obtener la opinión y la puntuación de la reseña del formulario
+        const comentario = document.getElementById('opinion').value;
+        const puntuacion = parseInt(document.getElementById('rating').value);
+
+        // Crear el objeto con los datos de la reseña
+        const reviewData = {
+            servicioId,
+            comentario,
+            puntuacion
+        };
+        console.log(reviewData)
+
+        try {
+            // Enviar la reseña al servidor
+            const response = await fetch('/api/review/create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(reviewData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Error al enviar la reseña');
+            }
+
+            const responseData = await response.json();
+            alert("Tu opinión ha sido enviada con éxito, ya puedes visualizarla en el perfil del médico veterinario")
+            window.location.href = `/vetprofile/${servicioId}`;
+            console.log(responseData); // Puedes hacer algo con la respuesta del servidor, como redirigir al usuario a otra página o mostrar un mensaje de éxito
+        } catch (error) {
+            console.error('Error al enviar la reseña:', error);
+            // Aquí puedes mostrar un mensaje de error al usuario si la solicitud falla
+        }
+    });
+});
 
 function rateStar(rating) {
     const stars = document.querySelectorAll('#star-rating .star');
@@ -19,22 +64,6 @@ function rateStar(rating) {
     });
 }
 
-function loadVetData() {
-    var vetId = document.getElementById('vetSelector').value;
-    if (vetId) {
-        // Ejemplo de cómo podrías hacer una solicitud HTTP para obtener datos
-        fetch(`/get-vet-data?veterinarianId=${vetId}`)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('vetName').textContent = data.name;
-                document.getElementById('appointmentDateTime').textContent = data.appointmentDateTime;
-                document.getElementById('serviceName').textContent = data.serviceName;
-                document.getElementById('serviceLocation').textContent = data.location;
-                document.getElementById('petName').textContent = data.petName;
-            })
-            .catch(error => console.error('Error fetching vet data:', error));
-    }
-}
 
 // Esta función se encarga de cargar los datos de la cita al cargar la página
 function loadAppointmentData(appointmentId) {
@@ -58,7 +87,7 @@ function loadAppointmentData(appointmentId) {
                  month: 'long', // Mes (enero, febrero, etc.)
                  day: 'numeric', // Día del mes (ej. 1, 2, 3)
              });
-             
+
             const appointmentInfo = `
                 <div class="col-sm-4 my-3" style="margin: auto;">
                     <img src="../../img/imag_veterinarios/${appointment.servicio.veterinario.rut}.jpeg" alt="${appointment.servicio.veterinario.nombre}" class="img-fluid">
@@ -92,10 +121,12 @@ function loadAppointmentData(appointmentId) {
                 </div>
             `;
             rowContainer.innerHTML = appointmentInfo;
+            return servicioId = appointment.cita.servicio;
         })
         .catch(error => {
             console.error('Error fetching appointment data:', error);
         });
+    
 }
 
 

@@ -146,6 +146,23 @@ select {
     width: 15rem;
 }
 
+.cardReview {
+    border: 1px solid #226669;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    padding: 2rem;
+}
+
+.infoVetCard {
+    border: 1px solid #226669;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
 /* Estilos para las tarjetas de servicio */
 .card {
     border: 1px solid #226669;
@@ -153,7 +170,7 @@ select {
     margin-bottom: 1em;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: auto;
-    max-width: 75%;
+    max-width: 65%;
     margin: auto;
 }
 
