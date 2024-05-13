@@ -3,8 +3,6 @@ const pathSegments = window.location.pathname.split('/');
 const servicioId = pathSegments[pathSegments.length - 1];
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log(servicioId)
-
     // Llamar a la función para cargar los datos del veterinario y sus reseñas
     await loadServiceData(servicioId);
     await loadServiceReviews(servicioId);
@@ -47,7 +45,7 @@ async function loadServiceData(servicioId) {
                     </p>
                 </div>
                 <div class="infoVetCard col-sm-7">
-                    <h4 class="mb-4" style="color: #226669">Reseñas:</h4>
+                    <h5 class="mb-1" style="color: #226669">Reseñas:</h5>
                     <div class="reviews-container"></div>
                 </div>
             `;
@@ -80,11 +78,11 @@ async function loadServiceReviews(servicioId) {
 
                 // Crear HTML para mostrar la reseña
                 const reviewHTML = `
-                    <p>${review.usuario.name}:</p>
+                    <p style="margin-bottom:0;"><img src="../../img/user-icon.png" style="width:2.5rem;"> ${review.usuario.name}:</p>
                     <div id="star-rating" style="color: #ffcc00;">
                         ${getStarRatingHTML(review.puntuacion)}
                     </div>
-                    <p><strong>Comentario:</strong> ${review.comentario}</p>                    
+                    <p style="margin-bottom:0; margin-top:0;">${review.comentario}</p>                    
                 `;
 
                 // Agregar el HTML de la reseña al elemento creado
