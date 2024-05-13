@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (email) {
         var loginButton = document.getElementById('loginButton');
-        loginButton.textContent = 'Sesión Iniciada: ' + email;
+        loginButton.innerHTML = ` <span style="padding-left:1rem;">${email}</span><img src="../../img/user-icon.png" alt="Descripción de la imagen" style="width:3rem;">`;
         loginButton.addEventListener('click', function(event) {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
              // Redirigir al usuario a la página de perfil
