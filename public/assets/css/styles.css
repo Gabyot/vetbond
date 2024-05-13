@@ -63,17 +63,33 @@ footer {
     color: grey;
 }
 
+.btn-logout {
+
+    color:#226669;
+    /* Cambia el color del texto */
+    padding: 1rem;
+    margin: auto;
+}
+
+.btn-logout:hover {
+
+    color:#32979c;
+    /* Cambia el color del texto */
+    padding: 1rem;
+    margin: auto;
+}
+
+
 .btn-login {
     background-color: #226669;
     /* Cambia el color de fondo */
     border-color: white;
-    border-radius: 8px;
+    border-radius: 30px;
     /* Cambia el color del borde */
     color: white;
     /* Cambia el color del texto */
     padding: 1rem;
     margin: auto;
-    margin-right: 1rem;
 }
 
 .btn-login:hover {
@@ -149,10 +165,10 @@ select {
 .cardReview {
     border: 1px solid #226669;
     border-radius: 8px;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: auto;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .infoVetCard {
@@ -203,7 +219,7 @@ select {
 }
 
 .serviceSection {
-    margin-top: 6rem;
+    margin-top: 4rem;
     margin-bottom: 6rem;
     justify-items: center;
 }
@@ -231,8 +247,9 @@ select {
 }
 .infoSection{
     justify-content: space-between;
-    padding: 12rem;
-    min-width: 75%;
+    margin:auto;
+    margin-top: 3rem;
+    max-width: 75%;
 }
 
 .infoCard{
@@ -240,10 +257,11 @@ select {
     border: 1px solid #226669;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: auto;
     width: 18rem;
     font-size: 0.8rem;
-    margin:auto;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    
 }
 
 .infoCard .media-body{
