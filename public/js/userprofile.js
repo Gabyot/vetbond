@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const emailContainer = document.getElementById('email');
         // Verificar si hay un email de usuario almacenado en el almacenamiento local
         var email = localStorage.getItem('email');
-        emailContainer.innerText = email;
+        emailContainer.innerText = `${email}`;
 
         // Limpiar los contenedores antes de agregar las nuevas citas
         citasProgramadasContainer.innerHTML = '';
