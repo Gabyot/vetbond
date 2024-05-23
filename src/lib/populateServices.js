@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
-import Service from '../model/Service.js'; // Asegúrate de que la ruta es correcta
+import Service from '../model/Service.js';  
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ const populateServices = async () => {
     });
 
     const servicesData = JSON.parse(
-      fs.readFileSync(path.join(__dirname, '../../data/services.json'), 'utf-8')
+      fs.readFileSync(path.join(__dirname, '../../data/vetbond.services.json'), 'utf-8')
     );
 
     await Service.deleteMany({});
