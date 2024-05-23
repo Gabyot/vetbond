@@ -38,9 +38,9 @@ MONGODB_URI=tu_cadena_de_conexión_de_mongodb
 ## 5. Poblar la Base de Datos
 El repositorio incluye un archivo JSON con datos para poblar la colección de servicios en la base de datos. Sigue estos pasos para poblar la base de datos:
 
-Asegúrate de que tu base de datos MongoDB esté en funcionamiento.
+1. Asegúrate de que tu base de datos MongoDB esté en funcionamiento.
 
-Ejecuta el siguiente script para poblar la base de datos con los datos del archivo services.json:
+2. Ejecuta el siguiente script para poblar la base de datos con los datos del archivo services.json:
 
 ```bash
 node src/lib/populateServices.js
