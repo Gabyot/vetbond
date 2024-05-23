@@ -1,0 +1,3262 @@
+[{
+  "_id": {
+    "$oid": "662e6cb9f13c98c355b4e158"
+  },
+  "nombre": "Vacunación Anual",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. María Gómez",
+    "rut": "98.765.432-1"
+  },
+  "direccion": {
+    "calle": "Avenida Central",
+    "numero": "456",
+    "ciudad": "Valparaíso",
+    "pais": "Chile"
+  },
+  "__v": 5,
+  "updatedAt": {
+    "$date": "2024-05-13T14:37:45.470Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662e6cb9f13c98c355b4e159"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 60000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "11:00 AM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Roberto Martínez",
+    "rut": "45.678.901-K"
+  },
+  "direccion": {
+    "calle": "Calle Secundaria",
+    "numero": "789",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  },
+  "__v": 3,
+  "updatedAt": {
+    "$date": "2024-05-13T14:36:52.035Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662e6cb9f13c98c355b4e157"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Juan Pérez",
+    "rut": "12.345.678-9"
+  },
+  "direccion": {
+    "calle": "Calle Principal",
+    "numero": "123",
+    "ciudad": "Santiago",
+    "pais": "Chile"
+  },
+  "__v": 4,
+  "updatedAt": {
+    "$date": "2024-05-08T13:50:35.377Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662e9b4ff13c98c355b4e173"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dra. Laura Sánchez",
+    "rut": "87.654.321-0"
+  },
+  "direccion": {
+    "calle": "Avenida Norte",
+    "numero": "987",
+    "ciudad": "La Serena",
+    "pais": "Chile"
+  },
+  "nombre": "Consulta General",
+  "precio": 20000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "__v": 2,
+  "updatedAt": {
+    "$date": "2024-05-23T16:01:06.250Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662e9b50f13c98c355b4e17c"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dr. Carlos Fernández",
+    "rut": "23.456.790-1"
+  },
+  "direccion": {
+    "calle": "Calle Este",
+    "numero": "321",
+    "ciudad": "Puerto Montt",
+    "pais": "Chile"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "662e9b50f13c98c355b4e178"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dr. Raúl Rebolledo",
+    "rut": "23.456.789-1"
+  },
+  "direccion": {
+    "calle": "Calle Este",
+    "numero": "321",
+    "ciudad": "Puerto Montt",
+    "pais": "Chile"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "663554d6bf24064cd81be47f"
+  },
+  "nombre": "Consulta General",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Sofia Ramirez",
+    "rut": "12.345.679-9"
+  },
+  "direccion": {
+    "calle": "Avenida Libertad",
+    "numero": "789",
+    "ciudad": "La Serena",
+    "pais": "Chile"
+  },
+  "__v": 2,
+  "updatedAt": {
+    "$date": "2024-05-13T20:29:11.279Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663586d90b9f56b921e52177"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dr. Jonathan Cortéz Tobar",
+    "rut": "24.567.890-7"
+  },
+  "direccion": {
+    "calle": "Ttata",
+    "numero": "8474",
+    "ciudad": "Temuco",
+    "pais": "Chile"
+  },
+  "nombre": "Consulta General",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "663588ad0b9f56b921e52179"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dra. Sofía Meza Amezcua",
+    "rut": "13.468.235-K"
+  },
+  "direccion": {
+    "calle": "Lautaro",
+    "numero": "456",
+    "ciudad": "Temuco",
+    "pais": "Chile"
+  },
+  "nombre": "Vacunación",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-08T16:12:46.947Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66358acd0b9f56b921e5217b"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dra. Daniela Jofré Hernández",
+    "rut": "18.796.402-2"
+  },
+  "direccion": {
+    "calle": "Avenida Libertador ",
+    "numero": "785",
+    "ciudad": "Temuco",
+    "pais": "Chile"
+  },
+  "nombre": "Cirugía de esterilización",
+  "precio": 60000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66358c380b9f56b921e5217d"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dra. Yang Loon Hsiao Tsao",
+    "rut": "25.394.817-9"
+  },
+  "direccion": {
+    "calle": "Pasaje Las Rosas ",
+    "numero": "4526",
+    "ciudad": "Temuco",
+    "pais": "Chile"
+  },
+  "nombre": "Etología",
+  "precio": 20000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66358cb30b9f56b921e5217f"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dr Yuzun Alfonso Ley Lee",
+    "rut": "12.986.475-5"
+  },
+  "direccion": {
+    "calle": "O'Higgino",
+    "numero": "325",
+    "ciudad": "Temuco",
+    "pais": "Chile"
+  },
+  "nombre": "Toma de exámenes",
+  "precio": 3000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66358d230b9f56b921e52181"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dra. Marcela Del Carmen Castillo Cortés",
+    "rut": "15.478.902-3"
+  },
+  "direccion": {
+    "calle": "Avenida del Mar ",
+    "numero": "1200",
+    "ciudad": "Iquique",
+    "pais": "Chile"
+  },
+  "nombre": "Consulta General",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-06T19:08:35.666Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66358e4e0b9f56b921e52183"
+  },
+  "nombre": "Vacunación",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Nadia Alejandra Albarrán Meixner",
+    "rut": "21.689.345-6"
+  },
+  "direccion": {
+    "calle": "Prat",
+    "numero": "1223",
+    "ciudad": "Iquique",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "663593a800ba9627e4494891"
+  },
+  "nombre": "Consulta General",
+  "precio": 28000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:30 AM",
+        "12:00 PM",
+        "3:30 PM",
+        "5:30 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:30 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "10:00 AM",
+        "2:00 PM",
+        "5:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Maria González",
+    "rut": "15.678.910-2"
+  },
+  "direccion": {
+    "calle": "Avenida del Parque",
+    "numero": "456",
+    "ciudad": "Santiago",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635949b00ba9627e4494894"
+  },
+  "nombre": "Consulta General",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:30 AM",
+        "2:30 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "12:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "3:00 PM",
+        "6:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Carlos Ruiz",
+    "rut": "17.890.123-4"
+  },
+  "direccion": {
+    "calle": "Paseo Los Dominicos",
+    "numero": "789",
+    "ciudad": "Santiago",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-11T17:52:26.712Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663594a100ba9627e4494895"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "10:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Isabel Mora",
+    "rut": "16.543.210-K"
+  },
+  "direccion": {
+    "calle": "Avenida Vitacura",
+    "numero": "1234",
+    "ciudad": "Santiago",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "663594a700ba9627e4494896"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 72000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "12:30 PM",
+        "3:30 PM",
+        "5:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Eduardo Vargas",
+    "rut": "18.234.567-8"
+  },
+  "direccion": {
+    "calle": "Calle Nueva Providencia",
+    "numero": "1010",
+    "ciudad": "Santiago",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "663594ad00ba9627e4494897"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 50000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:30 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "5:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Sofia Barrios",
+    "rut": "19.876.543-2"
+  },
+  "direccion": {
+    "calle": "Avenida Las Condes",
+    "numero": "505",
+    "ciudad": "Santiago",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-05T04:45:49.293Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635951f0b9f56b921e52184"
+  },
+  "profesional_veterinario": {
+    "nombre": " Dr. Manuel Andrés Lavados Sepúlveda",
+    "rut": "24.703.158-1"
+  },
+  "direccion": {
+    "calle": "Andino",
+    "numero": "405",
+    "ciudad": "Iquique",
+    "pais": "Chile"
+  },
+  "nombre": "Cirugía de esterilización",
+  "precio": 50000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "663599c90b9f56b921e52185"
+  },
+  "nombre": "Toma de exámenes",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Daniela Jofré Hernández",
+    "rut": "17.892.346-K"
+  },
+  "direccion": {
+    "calle": "Arauco",
+    "numero": "1234",
+    "ciudad": "Iquique",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359a470b9f56b921e52186"
+  },
+  "nombre": "Etología",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Viviana Jara Herrera",
+    "rut": "23.481.679-4"
+  },
+  "direccion": {
+    "calle": "Avenida Matta",
+    "numero": "1421",
+    "ciudad": "Iquique",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359abd0b9f56b921e52187"
+  },
+  "nombre": "Consulta General",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Fabian Palma",
+    "rut": "20.783.218-k"
+  },
+  "direccion": {
+    "calle": "Balmaceda",
+    "numero": "5321",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-13T01:07:41.336Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359b130b9f56b921e52189"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Gastón González Palma",
+    "rut": "19.536.284-8"
+  },
+  "direccion": {
+    "calle": "Freire",
+    "numero": "871",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-13T01:26:55.605Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ba40b9f56b921e5218a"
+  },
+  "nombre": "Vacunación",
+  "precio": 27000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Jorge García Guitart",
+    "rut": "14.698.702-7"
+  },
+  "direccion": {
+    "calle": "Pedro Valdivia",
+    "numero": "1445",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359c040b9f56b921e5218b"
+  },
+  "profesional_veterinario": {
+    "nombre": " Dra. Solange Rose Anuch Juri",
+    "rut": "16.983.254-K"
+  },
+  "direccion": {
+    "calle": "Arturo Prat",
+    "numero": "264",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  },
+  "nombre": "Cirugía de esterilización",
+  "precio": 55000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-13T01:35:52.284Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359c5f0b9f56b921e5218c"
+  },
+  "nombre": "Toma de exámenes",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Kenneth Fisk Garrido",
+    "rut": "20.875.416-5"
+  },
+  "direccion": {
+    "calle": "Blanco Encalada",
+    "numero": "1672",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359cdd0b9f56b921e5218d"
+  },
+  "nombre": "Etología",
+  "precio": 20000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Alejandra Cantillana Vásquez ",
+    "rut": "11.234.685-3"
+  },
+  "direccion": {
+    "calle": "Gran Bretaña",
+    "numero": "675",
+    "ciudad": "Concepción",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359d7a00ba9627e4494898"
+  },
+  "nombre": "Consulta General",
+  "precio": 28000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "1:00 PM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Roberto Silva",
+    "rut": "20.123.456-7"
+  },
+  "direccion": {
+    "calle": "Avenida Camilo Henríquez",
+    "numero": "250",
+    "ciudad": "Puente Alto",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-13T01:42:18.360Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359daf00ba9627e4494899"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 75000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Carmen Gutiérrez",
+    "rut": "22.345.678-K"
+  },
+  "direccion": {
+    "calle": "Calle Concha y Toro",
+    "numero": "1055",
+    "ciudad": "Puente Alto",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359db400ba9627e449489a"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 32000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Alejandro Mendoza",
+    "rut": "23.456.789-1"
+  },
+  "direccion": {
+    "calle": "Avenida Eyzaguirre",
+    "numero": "1982",
+    "ciudad": "Puente Alto",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359db900ba9627e449489b"
+  },
+  "nombre": "Vacunación Anual",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Patricia Núñez",
+    "rut": "24.567.890-5"
+  },
+  "direccion": {
+    "calle": "Calle Nonato Coo",
+    "numero": "333",
+    "ciudad": "Puente Alto",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359dc70b9f56b921e5218e"
+  },
+  "nombre": "Consulta General",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Pablo Andrés Gallardo Araya",
+    "rut": "23.459.781-2"
+  },
+  "direccion": {
+    "calle": "Colo colo",
+    "numero": "143",
+    "ciudad": "Rancagua",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-12T21:00:39.525Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359de800ba9627e449489c"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Veronica Soto",
+    "rut": "25.678.901-2"
+  },
+  "direccion": {
+    "calle": "Avenida Gabriela",
+    "numero": "2245",
+    "ciudad": "Puente Alto",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359dfa00ba9627e449489d"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Lucas Ortega",
+    "rut": "26.789.012-3"
+  },
+  "direccion": {
+    "calle": "Avenida Balmaceda",
+    "numero": "500",
+    "ciudad": "Antofagasta",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e0000ba9627e449489e"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Daniela Torres",
+    "rut": "27.890.123-4"
+  },
+  "direccion": {
+    "calle": "Calle Prat",
+    "numero": "750",
+    "ciudad": "Antofagasta",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e0500ba9627e449489f"
+  },
+  "nombre": "Vacunación Anual",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Francisco Gómez",
+    "rut": "28.901.234-5"
+  },
+  "direccion": {
+    "calle": "Avenida Argentina",
+    "numero": "1230",
+    "ciudad": "Antofagasta",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e0a00ba9627e44948a0"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Elena Rodríguez",
+    "rut": "29.012.345-6"
+  },
+  "direccion": {
+    "calle": "Avenida Edmundo Pérez Zujovic",
+    "numero": "2100",
+    "ciudad": "Antofagasta",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e0e00ba9627e44948a1"
+  },
+  "nombre": "Consulta General",
+  "precio": 32000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM",
+        "2:30 PM",
+        "4:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Teresa Morales",
+    "rut": "30.123.456-7"
+  },
+  "direccion": {
+    "calle": "Avenida Pedro Aguirre Cerda",
+    "numero": "2020",
+    "ciudad": "Antofagasta",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e2400ba9627e44948a2"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:30 AM",
+        "11:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Nicolás Fuentes",
+    "rut": "31.234.567-8"
+  },
+  "direccion": {
+    "calle": "Calle Álvarez",
+    "numero": "855",
+    "ciudad": "Viña del Mar",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e2a00ba9627e44948a3"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Claudia Miranda",
+    "rut": "32.345.678-9"
+  },
+  "direccion": {
+    "calle": "Avenida Libertad",
+    "numero": "1340",
+    "ciudad": "Viña del Mar",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e2f00ba9627e44948a4"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Jorge Salinas",
+    "rut": "33.456.789-0"
+  },
+  "direccion": {
+    "calle": "Calle Quillota",
+    "numero": "1299",
+    "ciudad": "Viña del Mar",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e3400ba9627e44948a5"
+  },
+  "nombre": "Vacunación Anual",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Marta Ríos",
+    "rut": "34.567.890-K"
+  },
+  "direccion": {
+    "calle": "Avenida Marina",
+    "numero": "2120",
+    "ciudad": "Viña del Mar",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e3800ba9627e44948a6"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 82000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:30 AM",
+        "11:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Sebastián Campos",
+    "rut": "35.678.901-2"
+  },
+  "direccion": {
+    "calle": "Calle Viana",
+    "numero": "3030",
+    "ciudad": "Viña del Mar",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e5000ba9627e44948a7"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Andrés Navarro",
+    "rut": "46.789.012-3"
+  },
+  "direccion": {
+    "calle": "Calle Covadonga",
+    "numero": "1000",
+    "ciudad": "San Bernardo",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e5700ba9627e44948a8"
+  },
+  "nombre": "Control Rutinario",
+  "precio": 32000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:30 AM",
+        "11:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Diego Hidalgo Vergara",
+    "rut": "50.123.456-7"
+  },
+  "direccion": {
+    "calle": "Avenida Condell",
+    "numero": "3030",
+    "ciudad": "San Bernardo",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e5c00ba9627e44948a9"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Rodrigo Pérez",
+    "rut": "48.901.234-5"
+  },
+  "direccion": {
+    "calle": "Calle Eyzaguirre",
+    "numero": "1982",
+    "ciudad": "San Bernardo",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e6000ba9627e44948aa"
+  },
+  "nombre": "Vacunación Anual",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Susana Gómez",
+    "rut": "49.012.345-6"
+  },
+  "direccion": {
+    "calle": "Avenida América",
+    "numero": "2120",
+    "ciudad": "San Bernardo",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e6500ba9627e44948ab"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Carolina Herrera",
+    "rut": "47.890.123-4"
+  },
+  "direccion": {
+    "calle": "Avenida Portales",
+    "numero": "750",
+    "ciudad": "San Bernardo",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359e790b9f56b921e5218f"
+  },
+  "nombre": "Vacunación",
+  "precio": 28000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr.Felipe Patiño Salas",
+    "rut": "19.546.372-1"
+  },
+  "direccion": {
+    "calle": "San Martín",
+    "numero": "80",
+    "ciudad": "Rancagua",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ec600ba9627e44948ac"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 32000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:30 AM",
+        "11:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. José Martínez",
+    "rut": "45.678.901-2"
+  },
+  "direccion": {
+    "calle": "Avenida Manuel Montt",
+    "numero": "3030",
+    "ciudad": "Talcahuano",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ecc00ba9627e44948ad"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Gabriel Ruiz",
+    "rut": "43.456.789-0"
+  },
+  "direccion": {
+    "calle": "Avenida Las Industrias",
+    "numero": "1982",
+    "ciudad": "Talcahuano",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ed400ba9627e44948ae"
+  },
+  "nombre": "Consulta General",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Patricio López",
+    "rut": "44.567.890-K"
+  },
+  "direccion": {
+    "calle": "Calle Sargento Aldea",
+    "numero": "2120",
+    "ciudad": "Talcahuano",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ed800ba9627e44948af"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Alejandra Vidal",
+    "rut": "42.345.678-9"
+  },
+  "direccion": {
+    "calle": "Calle Blanco Encalada",
+    "numero": "750",
+    "ciudad": "Talcahuano",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ede00ba9627e44948b0"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Marco Antonio Soto",
+    "rut": "41.234.567-8"
+  },
+  "direccion": {
+    "calle": "Avenida Colón",
+    "numero": "1000",
+    "ciudad": "Talcahuano",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359ee60b9f56b921e52190"
+  },
+  "nombre": "Cirugía de esterilización",
+  "precio": 58000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Alejandro Ferreira Camacho",
+    "rut": "21.378.945-K"
+  },
+  "direccion": {
+    "calle": "Lago Llanquihue",
+    "numero": "998",
+    "ciudad": "Rancagua",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359efe00ba9627e44948b1"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Fernando Gálvez",
+    "rut": "36.789.012-3"
+  },
+  "direccion": {
+    "calle": "Calle Uruguay",
+    "numero": "1210",
+    "ciudad": "Valparaíso",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359f0400ba9627e44948b2"
+  },
+  "nombre": "Control Rutinario",
+  "precio": 32000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:30 AM",
+        "1:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Luisa Araya",
+    "rut": "40.123.456-7"
+  },
+  "direccion": {
+    "calle": "Calle Victoria",
+    "numero": "3030",
+    "ciudad": "Valparaíso",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-13T01:45:42.346Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359f0900ba9627e44948b3"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 80000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Amelia Castro",
+    "rut": "37.890.123-4"
+  },
+  "direccion": {
+    "calle": "Avenida Brasil",
+    "numero": "1340",
+    "ciudad": "Valparaíso",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359f0d00ba9627e44948b4"
+  },
+  "nombre": "Vacunación Anual",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "8:00 AM",
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "8:30 AM",
+        "10:30 AM",
+        "12:30 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Cecilia Muñoz",
+    "rut": "39.012.345-6"
+  },
+  "direccion": {
+    "calle": "Avenida Playa Ancha",
+    "numero": "3120",
+    "ciudad": "Valparaíso",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359f1200ba9627e44948b5"
+  },
+  "nombre": "Chequeo de Rutina",
+  "precio": 35000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "10:00 AM",
+        "12:00 PM",
+        "2:00 PM",
+        "4:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "9:00 AM",
+        "11:00 AM",
+        "1:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Iván Reyes",
+    "rut": "38.901.234-5"
+  },
+  "direccion": {
+    "calle": "Calle Bellavista",
+    "numero": "2299",
+    "ciudad": "Valparaíso",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359f2e0b9f56b921e52191"
+  },
+  "nombre": "Toma de exámenes",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Sergio Álvarez Díaz",
+    "rut": "17.845.236-9"
+  },
+  "direccion": {
+    "calle": "Avenida Francia",
+    "numero": "458",
+    "ciudad": "Rancagua",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "66359fa60b9f56b921e52192"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dra. Lissette Estefanía Leiva Sánchez",
+    "rut": "14.796.083-4"
+  },
+  "direccion": {
+    "calle": "Vicuña Maquena",
+    "numero": "113",
+    "ciudad": "Rancagua",
+    "pais": "Chile"
+  },
+  "nombre": "Etología",
+  "precio": 15000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6635a1d00b9f56b921e52193"
+  },
+  "profesional_veterinario": {
+    "nombre": "Dr. Eugenio Andrés Rivas Zapata",
+    "rut": "13.497.602-0"
+  },
+  "direccion": {
+    "calle": "Errázuriz",
+    "numero": "210",
+    "ciudad": "Talca",
+    "pais": "Chile"
+  },
+  "nombre": "Consulta General",
+  "precio": 36000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6635a2140b9f56b921e52194"
+  },
+  "nombre": "Vacunación",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Agustín Álvarez Plaza",
+    "rut": "16.587.234-7"
+  },
+  "direccion": {
+    "calle": "Avenida Brasil",
+    "numero": "635",
+    "ciudad": "Talca",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a26c0b9f56b921e52195"
+  },
+  "nombre": "Cirugía de Esterilización",
+  "precio": 60000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Percy Brante Báez",
+    "rut": "24.856.971-5"
+  },
+  "direccion": {
+    "calle": "Carrera",
+    "numero": "900",
+    "ciudad": "Talca",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a2c60b9f56b921e52196"
+  },
+  "nombre": "Etología",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Daniel Mamani Jaches",
+    "rut": "18.964.725-3"
+  },
+  "direccion": {
+    "calle": "Lynch",
+    "numero": "420",
+    "ciudad": "Talca",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a3320b9f56b921e52197"
+  },
+  "nombre": "Etología",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Maher Elías Musleh Katan",
+    "rut": "15.478.692-6"
+  },
+  "direccion": {
+    "calle": "Los Alerces",
+    "numero": "3467",
+    "ciudad": "Talca",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a3680b9f56b921e52198"
+  },
+  "nombre": "Consulta General",
+  "precio": 30000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Alejandro Cancino Viveros",
+    "rut": "21.587.394-K"
+  },
+  "direccion": {
+    "calle": "Esmeralda",
+    "numero": "365",
+    "ciudad": "Arica",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a3d40b9f56b921e52199"
+  },
+  "nombre": "Vacunación",
+  "precio": 28000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Ricardo Rossi Meersohn",
+    "rut": "13.647.281-1"
+  },
+  "direccion": {
+    "calle": "Cochrane",
+    "numero": "73",
+    "ciudad": "Arica",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a4230b9f56b921e5219a"
+  },
+  "nombre": "Cirugía de esterilización",
+  "precio": 62000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Carlos Jesse León Mejia",
+    "rut": "20.385.746-9"
+  },
+  "direccion": {
+    "calle": "Condell",
+    "numero": "991",
+    "ciudad": "Arica",
+    "pais": "Chile"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a4b80b9f56b921e5219b"
+  },
+  "nombre": "Toma de exámenes",
+  "precio": 40000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "11:00 AM",
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dr. Mathias Patricio Brain Sánchez",
+    "rut": "19.682.543-49"
+  },
+  "direccion": {
+    "calle": "San Pablo",
+    "numero": "223",
+    "ciudad": "Arica",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-12T03:08:59.380Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6635a5610b9f56b921e5219c"
+  },
+  "nombre": "Etología",
+  "precio": 25000,
+  "fechas_disponibles": [
+    {
+      "fecha": "2024-05-13",
+      "horarios": [
+        "10:00 AM",
+        "11:00 AM",
+        "2:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-14",
+      "horarios": [
+        "9:00 AM",
+        "12:00 PM",
+        "3:00 PM"
+      ]
+    },
+    {
+      "fecha": "2024-05-15",
+      "horarios": [
+        "1:00 PM",
+        "4:00 PM"
+      ]
+    }
+  ],
+  "profesional_veterinario": {
+    "nombre": "Dra. Mabel Muga Carrizo",
+    "rut": "12.784.956-8"
+  },
+  "direccion": {
+    "calle": "Barros Arana",
+    "numero": "243",
+    "ciudad": "Arica",
+    "pais": "Chile"
+  },
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-05-13T01:33:15.159Z"
+  }
+}]
