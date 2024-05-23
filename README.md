@@ -3,10 +3,11 @@
 2. [Instalación](#2-instalación)
 3. [Uso](#3-uso)
 4. [Variables de Entorno](#4-variables-de-entorno)
-5. [Estructura del Proyecto](#5-estructura-del-proyecto)
-6. [Scripts Disponibles](#6-scripts-disponibles)
-7. [Endpoints de la API](#7-endpoints-de-la-api)
-8. [Contribuciones](#8-contribuciones)
+5. [Poblar la Base de Datos](#5-poblar-la-base-de-datos)
+6. [Estructura del Proyecto](#6-estructura-del-proyecto)
+7. [Scripts Disponibles](#7-scripts-disponibles)
+8. [Endpoints de la API](#8-endpoints-de-la-api)
+9. [Contribuciones](#9-contribuciones)
 
 ## 1. Descripción del Proyecto
 Vetbond es una aplicación web que conecta a usuarios con veterinarios, permitiéndoles programar citas, ver servicios disponibles y dejar reseñas sobre las citas completadas. El backend está desarrollado usando Node.js y Express, con MongoDB como base de datos.
@@ -34,8 +35,21 @@ La aplicación requiere la configuración de algunas variables de entorno. Crea 
 ```bash
 MONGODB_URI=tu_cadena_de_conexión_de_mongodb
 ```
+## 5. Poblar la Base de Datos
+El repositorio incluye un archivo JSON con datos para poblar la colección de servicios en la base de datos. Sigue estos pasos para poblar la base de datos:
 
-## 5. Estructura del Proyecto
+Asegúrate de que tu base de datos MongoDB esté en funcionamiento.
+
+Ejecuta el siguiente script para poblar la base de datos con los datos del archivo services.json:
+
+```bash
+node src/lib/populateServices.js
+```
+
+Siguiendo estos pasos, puedes poblar fácilmente la colección de servicios en tu base de datos MongoDB.
+
+
+## 6. Estructura del Proyecto
 La estructura del proyecto está organizada de la siguiente manera:
 
 ```bash
@@ -70,13 +84,13 @@ vetbond/
 * package.json: Archivo de configuración de npm.
 * README.md: Documentación del proyecto.
 
-## 6. Scripts Disponibles
+## 7. Scripts Disponibles
 En el archivo package.json, hay algunos scripts definidos:
 
 * npm run dev: Inicia el servidor en modo desarrollo usando nodemon.
 * npm start: Inicia el servidor en modo producción.
 
-## 7. Endpoints de la API
+## 8. Endpoints de la API
 Aquí se pueden listar algunos de los endpoints principales de la API:
 
 - **POST /api/appointments/create**: Crea una nueva cita.
@@ -98,7 +112,7 @@ Aquí se pueden listar algunos de los endpoints principales de la API:
 - **GET /api/services/times**: Obtiene los horarios de una fecha específica de un servicio.
 - **GET /api/services/names**: Obtiene todos los nombres de los servicios.
 
-## 8. Contribuciones
+## 9. Contribuciones
 Las contribuciones son bienvenidas. Para contribuir, sigue estos pasos:
 
 1. Haz un fork del repositorio.
