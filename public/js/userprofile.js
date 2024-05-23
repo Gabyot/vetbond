@@ -114,6 +114,15 @@ document.addEventListener('DOMContentLoaded', async function () {
                 citasCompletadasContainer.innerHTML += citaHTML;
             }
         });
+         // Verificar si no hay citas programadas
+         if (citasProgramadasContainer.innerHTML === '') {
+            citasProgramadasContainer.innerHTML = '<p>Actualmente no tienes citas programadas.</p>';
+        }
+
+        // Verificar si no hay citas completadas
+        if (citasCompletadasContainer.innerHTML === '') {
+            citasCompletadasContainer.innerHTML = '<p>Aún no has completado ninguna cita.</p>';
+        }
     } catch (error) {
         console.error('Error al obtener las citas del usuario:', error);
     }
