@@ -1,12 +1,12 @@
 import express from 'express';
 import morgan from 'morgan';
-import authRoutes from './routes/authRoutes.js';
+import authRoutes from '/routes/authRoutes.js';
 import cookieParser from "cookie-parser";
 import cors from 'cors';
-import serviceRoutes from './routes/serviceRoutes.js';
-import frontendRoutes from './routes/frontendRoutes.js'; 
-import appointmentRoutes from './routes/appointmentRoutes.js'; 
-import reviewRoutes from './routes/reviewRoutes.js'
+import serviceRoutes from '/routes/serviceRoutes.js';
+import frontendRoutes from '/routes/frontendRoutes.js'; 
+import appointmentRoutes from '/routes/appointmentRoutes.js'; 
+import reviewRoutes from '/routes/reviewRoutes.js'
 
 
 
