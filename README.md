@@ -15,7 +15,7 @@ Vetbond es una aplicaci√≥n web que conecta a usuarios con veterinarios, permiti√
 Para comenzar con el proyecto, clona el repositorio e instala las dependencias:
 
 ```bash
-git clone https://github.com/tuusuario/vetbond.git
+git clone https://github.com/gabyot/vetbond.git
 cd vetbond
 npm install
 ```
