@@ -65,3 +65,4 @@ package-lock.json
 *.tmp
 *.temp
 *.bak
+.DS_Store
