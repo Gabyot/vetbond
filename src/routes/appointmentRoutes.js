@@ -12,7 +12,7 @@ router.post('/appointments/create', authRequire, createAppointment);
 router.get('/appointments/user', authRequire, getAppointmentsByUserId);
 
 // Ruta para obtener las citas de un usuario por userId
-router.get('/appointment/delete/:id', authRequire, deleteAppointmentById);
+router.delete('/appointment/delete/:id', authRequire, deleteAppointmentById);
 
 // Ruta para obtener información de una cita por appointmentId
 router.get('/appointment/:id', authRequire, getAppointmentById);
