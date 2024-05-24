@@ -5,10 +5,9 @@ import { TOKEN_SECRET } from "../config.js";
 import jwt from 'jsonwebtoken';
 
 // Función para crear un token de acceso JWT
-export async function createAccessToken(payload) {
-    try {
+export function createAccessToken(payload) {
     // Retornar una promesa para manejar de manera asincrónica la generación del token
-    return await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         // Firmar el payload utilizando el secreto del token
         jwt.sign(
             payload, // Payload que se incluirá en el token
@@ -24,8 +23,4 @@ export async function createAccessToken(payload) {
             }
         );
     });
-    } catch (error) {
-        throw new Error(`Error al crear el token de acceso: ${error.message}`);
-    }
-
 }

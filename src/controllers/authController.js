@@ -65,7 +65,6 @@ export const login = async (req, res) => {
             secure: process.env.NODE_ENV === 'production', // Solo enviar la cookie a través de HTTPS en producción
             sameSite: 'None', 
             maxAge: 24 * 60 * 60 * 1000, // 1 día en milisegundos
-            domain: 'vetbond.render.com' 
         });
 
 
