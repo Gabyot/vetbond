@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Enviar datos a la API
-        fetch('https://vetbond.render.com/api/login', {
+        fetch('/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
              // Redirigir al usuario a la página de perfil
              window.location.href = '/profile';
             // Realizar una solicitud a la API para cerrar la sesión del usuario
-            fetch('https://vetbond.render.com/api/profile', {
+            fetch('/api/profile', {
                 method: 'GET',
                 credentials: 'include', // Incluir cookies en la solicitud
                 headers: {
