@@ -1,8 +1,8 @@
-import express from 'express';
+import { Router } from "express";
 import {createReview,getReviewsByServiceId, getReviewById, deleteReviewById } from '../controllers/ReviewController.js';
 import { authRequire } from '../middlewares/validateToken.js';
 
-const router = express.Router();
+const router = Router();
 
 // Ruta para crear una nueva reseña
 router.post('/review/create', authRequire, createReview);

@@ -1,7 +1,5 @@
 import { Router } from "express";
 import path from "path";
-import { authRequire } from "../middlewares/validateToken.js";
-
 
 const router = Router();
 

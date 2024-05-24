@@ -88,5 +88,4 @@ export const getReviewById = async (req, res) => {
     }
 };
 
-// Exportar los controladores de reseñas
-export default { createReview, getReviewsByServiceId, deleteReviewById, getReviewById };
+
