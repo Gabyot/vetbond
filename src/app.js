@@ -44,6 +44,5 @@ app.use('/', frontendRoutes);
 app.use(express.static('public')); 
 
 
-
 // Exportar la aplicación Express para su uso en otros archivos
 export default app;
