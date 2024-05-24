@@ -13,15 +13,19 @@ const app = express();
 
 // Permitir solicitudes desde todos los orígenes
 app.use(cors({
-    origin: true,
-    credentials: true,
-  }));
+  origin: 'https://vetbond.onrender.com',
+  credentials: true
+}));
+
+// Confianza en el primer proxy
+app.set('trust proxy', 1); 
 
 // Usar el middleware Morgan para el registro de solicitudes HTTP en el entorno de desarrollo
 app.use(morgan('dev'));
 
 // Usar el middleware integrado de Express para el análisis del cuerpo de las solicitudes en formato JSON
 app.use(express.json());
+
 // Configurar el middleware cookieParser en la aplicación Express
 app.use(cookieParser());
 
