@@ -3,12 +3,10 @@ import morgan from 'morgan';
 import authRoutes from './routes/authRoutes.js';
 import cookieParser from "cookie-parser";
 import cors from 'cors';
+import reviewRoutes from './routes/reviewRoutes.js'
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
 import appointmentRoutes from './routes/appointmentRoutes.js'; 
-import reviewRoutes from './routes/reviewRoutes.js'
-
-
 
 // Crear una instancia de la aplicación Express
 const app = express();
