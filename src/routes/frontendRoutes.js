@@ -28,7 +28,7 @@ router.get('/quienessomos', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-    res.sendFile(path.resolve('public/pages/userprofile.html'));
+    res.sendFile(path.resolve('public/pages/userProfile.html'));
 });
 
 router.get('/profile/review/:id', (req, res) => {
