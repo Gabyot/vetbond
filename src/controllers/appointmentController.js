@@ -1,5 +1,3 @@
-// Importar el modelo de usuario
-import User from '../model/User.js';
 // Importar el modelo de cita
 import Appointment from '../model/Appointment.js';
 // Importar el modelo de servicio

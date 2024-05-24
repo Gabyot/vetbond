@@ -13,38 +13,39 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Enviar datos a la API
-        fetch('http://localhost:3000/api/login', {
+        fetch('https://vetbond.render.com/api/login', { // Cambia a tu URL de producción
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            credentials: 'include' // Incluir cookies en la solicitud
         })
-            .then(response => response.json())
-            .then(data => {
-                // Manejar la respuesta de la API
-                if (data.id) {
-                    // El inicio de sesión fue exitoso
-                    alert('Inicio de sesión exitoso!');
-                    localStorage.setItem('email', email);
-                    // Obtener el parámetro de consulta 'redirect' de la URL
-                    const params = new URLSearchParams(window.location.search);
-                    const redirectUrl = params.get('redirect');
-                    // Redirigir al usuario de vuelta a la URL guardada antes de iniciar sesión
-                    if (redirectUrl) {
-                        window.location.href = redirectUrl;
-                    } else {
-                        // Si no hay URL de redirección, redirigir al usuario a una página por defecto
-                        window.location.href = '/';
-                    }
+        .then(response => response.json())
+        .then(data => {
+            // Manejar la respuesta de la API
+            if (data.id) {
+                // El inicio de sesión fue exitoso
+                alert('Inicio de sesión exitoso!');
+                localStorage.setItem('email', email);
+                // Obtener el parámetro de consulta 'redirect' de la URL
+                const params = new URLSearchParams(window.location.search);
+                const redirectUrl = params.get('redirect');
+                // Redirigir al usuario de vuelta a la URL guardada antes de iniciar sesión
+                if (redirectUrl) {
+                    window.location.href = redirectUrl;
                 } else {
-                    // El inicio de sesión falló, mostrar mensaje de error
-                    alert('Error al iniciar sesión: ' + data.message);
+                    // Si no hay URL de redirección, redirigir al usuario a una página por defecto
+                    window.location.href = '/';
                 }
-            })
-            .catch(error => {
-                // Manejar errores de red u otros errores
-                console.error('Error:', error);
-            });
+            } else {
+                // El inicio de sesión falló, mostrar mensaje de error
+                alert('Error al iniciar sesión: ' + data.message);
+            }
+        })
+        .catch(error => {
+            // Manejar errores de red u otros errores
+            console.error('Error:', error);
+        });
     });
 });
