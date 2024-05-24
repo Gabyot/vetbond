@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         logoutButton.addEventListener('click', function () {
             // Realizar una solicitud a la API para cerrar la sesión del usuario
-            fetch('https://vetbond.render.com/api/logout', {
+            fetch('/api/logout', {
                 method: 'POST', // Cambiar el método a GET
                 credentials: 'include', // Incluir cookies en la solicitud
                 headers: {
