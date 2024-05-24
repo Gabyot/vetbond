@@ -67,7 +67,7 @@ function createServiceCard(service) {
             <div class="card-body">
                 <div class="row">
                     <div class="col-4">
-                        <img src="../img/imag_veterinarios/${service.profesional_veterinario.rut}.jpeg" alt="Imagen del veterinario" class="img-fluid">
+                        <img loading = "lazy" src="../img/imag_veterinarios/${service.profesional_veterinario.rut}.jpeg" alt="Imagen del veterinario" class="img-fluid">
                     </div>
                     <div class="col-8" style="padding-right:3rem">
                         <h5 class="card-title text-start">${service.profesional_veterinario.nombre}</h5>
