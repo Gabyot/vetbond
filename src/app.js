@@ -13,7 +13,7 @@ const app = express();
 
 // Permitir solicitudes desde todos los orígenes
 app.use(cors({
-  origin: 'https://vetbond.onrender.com',
+  origin: 'https://vetbond.vercel.app/',
   credentials: true
 }));
 
