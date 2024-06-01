@@ -7,12 +7,6 @@ import reviewRoutes from './routes/reviewRoutes.js'
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
 import appointmentRoutes from './routes/appointmentRoutes.js'; 
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 
 // Crear una instancia de la aplicación Express
 const app = express();
@@ -48,7 +42,7 @@ app.use('/api', appointmentRoutes);
 app.use('/api', reviewRoutes);
 
 // Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static('../public'));
 
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 
