@@ -2,11 +2,6 @@
     "version": 2,
     "routes": [
       { "handle": "filesystem" },
-      {
-        "src": "/assets/(.*)",
-        "headers": { "Cache-Control": "public, max-age=31556952, immutable" },
-        "continue": true
-      },
       { "src": "/(.*)", "dest": "index.js" }
     ],
     "builds": [
