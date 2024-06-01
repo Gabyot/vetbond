@@ -44,9 +44,5 @@ app.use('/api', reviewRoutes);
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 
 
-// Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static('public')); 
-
-
 // Exportar la aplicación Express para su uso en otros archivos
 export default app;
