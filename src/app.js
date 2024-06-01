@@ -7,7 +7,15 @@ import reviewRoutes from './routes/reviewRoutes.js'
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
 import appointmentRoutes from './routes/appointmentRoutes.js'; 
-import path from 'path'; 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Obtén la ruta del archivo actual
+const __filename = fileURLToPath(import.meta.url);
+
+// Obtén el directorio base
+const __dirname = path.dirname(__filename);
+
 
 // Crear una instancia de la aplicación Express
 const app = express();
@@ -30,6 +38,9 @@ app.use(express.json());
 // Configurar el middleware cookieParser en la aplicación Express
 app.use(cookieParser());
 
+app.use('/static', express.static(path.join(__dirname, 'public')));
+
+
 // Usar las rutas de autenticación bajo el prefijo '/api'
 app.use('/api', authRoutes);
 
@@ -42,11 +53,8 @@ app.use('/api', appointmentRoutes);
 // Usar las rutas de citas bajo el prefijo '/api'
 app.use('/api', reviewRoutes);
 
-// Servir archivos estáticos desde el directorio 'public'
-app.use('/static', express.static('public'));
-
 // Usar las rutas del frontend
-app.use('/', frontendRoutes); 
+app.use('/', frontendRoutes);
 
 // Exportar la aplicación Express para su uso en otros archivos
 export default app;
