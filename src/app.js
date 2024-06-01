@@ -46,7 +46,7 @@ app.use('/api', reviewRoutes);
 const staticDir = path.join(new URL(import.meta.url).pathname, '..', 'public');
 
 // Servir archivos estáticos desde el directorio 'public'
-app.use(express.static(staticDir));
+app.use('/static', express.static(staticDir));
 
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 
