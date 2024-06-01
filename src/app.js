@@ -42,11 +42,8 @@ app.use('/api', appointmentRoutes);
 // Usar las rutas de citas bajo el prefijo '/api'
 app.use('/api', reviewRoutes);
 
-// Obtener el directorio estático absoluto utilizando import.meta.url
-const staticDir = path.join(new URL(import.meta.url).pathname, '..', 'public');
-
 // Servir archivos estáticos desde el directorio 'public'
-app.use('/static', express.static(staticDir));
+app.use('/static', express.static('public'));
 
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 
