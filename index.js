@@ -1,4 +1,5 @@
 import app from './src/app.js';
+import express from 'express'
 import { connectDB } from './src/config/database.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
