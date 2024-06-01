@@ -7,7 +7,12 @@ import reviewRoutes from './routes/reviewRoutes.js'
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
 import appointmentRoutes from './routes/appointmentRoutes.js'; 
-import path from 'path'
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 // Crear una instancia de la aplicación Express
 const app = express();
