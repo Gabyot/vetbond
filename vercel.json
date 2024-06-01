@@ -3,10 +3,10 @@
     "routes": [
       { "handle": "filesystem" },
       { "src": "/static/(.*)", "dest": "/public/$1" },
-      { "src": "/(.*)", "dest": "/src/index.js" }
+      { "src": "/(.*)", "dest": "index.js" }
     ],
     "builds": [
-      { "src": "src/index.js", "use": "@vercel/node" }
+      { "src": "index.js", "use": "@vercel/node" }
     ]
   }
   
