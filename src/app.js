@@ -7,6 +7,7 @@ import reviewRoutes from './routes/reviewRoutes.js'
 import serviceRoutes from './routes/serviceRoutes.js';
 import frontendRoutes from './routes/frontendRoutes.js'; 
 import appointmentRoutes from './routes/appointmentRoutes.js'; 
+import path from 'path'
 
 // Crear una instancia de la aplicación Express
 const app = express();
