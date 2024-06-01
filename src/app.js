@@ -42,7 +42,7 @@ app.use('/api', appointmentRoutes);
 app.use('/api', reviewRoutes);
 
 // Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static("../public")); 
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 
