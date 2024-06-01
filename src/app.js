@@ -41,6 +41,9 @@ app.use('/api', appointmentRoutes);
 // Usar las rutas de citas bajo el prefijo '/api'
 app.use('/api', reviewRoutes);
 
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static('public')); 
+
 // Usar las rutas del frontend
 app.use('/', frontendRoutes); 
 
