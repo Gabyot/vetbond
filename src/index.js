@@ -1,6 +1,5 @@
-import app from './src/app.js';
-import express from 'express'
-import { connectDB } from './src/config/database.js';
+import app from './app.js'; 
+import { connectDB } from './config/database.js';
 
 // Llamar a la función 'connectDB' para conectar con la base de datos
 connectDB();
