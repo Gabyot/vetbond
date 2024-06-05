@@ -29,7 +29,8 @@ app.use(express.json());
 // Configurar el middleware cookieParser en la aplicación Express
 app.use(cookieParser());
 
-app.use(express.static(__dirname, 'public'))
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 // Usar las rutas de autenticación bajo el prefijo '/api'
 app.use('/api', authRoutes);
