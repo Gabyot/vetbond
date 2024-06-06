@@ -6,7 +6,7 @@ const router = Router();
 const staticRouter = express.Router();
 
 // Ruta para los archivos estáticos del frontend
-staticRouter.use(express.static(path.join(__dirname, '../public')));
+staticRouter.use(express.static(path.join('../../public')));
 
 // Ruta para el archivo HTML principal del frontend
 router.get('/', (req, res) => {
