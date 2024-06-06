@@ -47,6 +47,4 @@ app.use('/api', reviewRoutes);
 // Usar las rutas del frontend
 app.use('/', frontendRoutes);
 
-
-// Exportar la aplicación Express para su uso en otros archivos
 export default app;
